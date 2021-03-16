@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: 1d376d457b1108a45871e15e41b76df9
+guid: 14a3e896d2e341d4f8126226bcaabfb6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -383070204473861482
-    second: herochar_hit_anim_strip_3_0
+      213: -4387502403121105992
+    second: mushroom_crushed_anim_strip_6_0
   - first:
-      213: -5655294235629092516
-    second: herochar_hit_anim_strip_3_1
+      213: 4934098177039159063
+    second: mushroom_crushed_anim_strip_6_1
   - first:
-      213: -3176142751176978677
-    second: herochar_hit_anim_strip_3_2
+      213: -4739746410951811203
+    second: mushroom_crushed_anim_strip_6_2
+  - first:
+      213: -3371635672966405916
+    second: mushroom_crushed_anim_strip_6_3
+  - first:
+      213: 9176025294522152392
+    second: mushroom_crushed_anim_strip_6_4
+  - first:
+      213: -1287735416353423757
+    second: mushroom_crushed_anim_strip_6_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: herochar_hit_anim_strip_3_0
+      name: mushroom_crushed_anim_strip_6_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 12
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69a9c4abdaf0faaf0800000000000000
-      internalID: -383070204473861482
+      spriteID: 8b33bc27fc57c13c0800000000000000
+      internalID: -4387502403121105992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: herochar_hit_anim_strip_3_1
+      name: mushroom_crushed_anim_strip_6_1
       rect:
         serializedVersion: 2
-        x: 17
+        x: 16
         y: 0
-        width: 12
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5183011bdb5481b0800000000000000
-      internalID: -5655294235629092516
+      spriteID: 71f42596620797440800000000000000
+      internalID: 4934098177039159063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: herochar_hit_anim_strip_3_2
+      name: mushroom_crushed_anim_strip_6_2
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 0
-        width: 11
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +173,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0f0a28eef21ce3d0800000000000000
-      internalID: -3176142751176978677
+      spriteID: d7fd8c160c9093eb0800000000000000
+      internalID: -4739746410951811203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mushroom_crushed_anim_strip_6_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e06dc8183b8531d0800000000000000
+      internalID: -3371635672966405916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mushroom_crushed_anim_strip_6_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5fdf1836ac75f70800000000000000
+      internalID: 9176025294522152392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mushroom_crushed_anim_strip_6_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e7097267b012ee0800000000000000
+      internalID: -1287735416353423757
       vertices: []
       indices: 
       edges: []

@@ -94,4 +94,5 @@ public class PhysicObject : MonoBehaviour
         }
         rb2d.position += move.normalized * distance;
     }
+
 }

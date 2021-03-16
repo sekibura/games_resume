@@ -12,6 +12,9 @@ public class PlayerAttack : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public int damagePoints;
 
+    public float attackRate = 10f;
+    private float nextTimeAttack = 0f;
+
   
     void Start()
     {
@@ -22,10 +25,15 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Time.time>=nextTimeAttack && Input.GetButtonDown("Fire1"))
         {
+            nextTimeAttack = Time.time + 1f/attackRate;
             Attack();
         }
+
+
+        
+        
     }
 
     private void Attack()
@@ -34,6 +42,7 @@ public class PlayerAttack : MonoBehaviour
         attackPoint.localPosition= new Vector3(spriteRenderer.flipX ? -attackPointDefaultPositionX: attackPointDefaultPositionX, attackPoint.localPosition.y, attackPoint.localPosition.z);
         animator.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        
 
         foreach(Collider2D enemy in hitEnemies)
         {
@@ -45,5 +54,6 @@ public class PlayerAttack : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        
     }
 }

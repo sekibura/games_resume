@@ -10,6 +10,11 @@ public class PlayerController : PhysicObject
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private Vector2 move = Vector2.zero;
+
+    //-----------attack impact
+    private float shift = 0f;
+
 
     private void Awake()
     {
@@ -19,8 +24,10 @@ public class PlayerController : PhysicObject
 
     protected override void ComputeVelocity()
     {
-        Vector2 move = Vector2.zero;
+        move = Vector2.zero;
+
         move.x = Input.GetAxis("Horizontal");
+
         if (Input.GetButtonDown("Jump") && grounded)
         {
             velocity.y = jumpTakeOffSpeed;
@@ -43,5 +50,14 @@ public class PlayerController : PhysicObject
         
 
         targetVelocity = move * maxSpeed;
+    }
+
+    public void Attacked()
+    {
+        
+        velocity.y = velocity.y>0? -jumpTakeOffSpeed:jumpTakeOffSpeed;
+        targetVelocity.x = velocity.x > 0 ? -maxSpeed : maxSpeed;
+        
+        
     }
 }
