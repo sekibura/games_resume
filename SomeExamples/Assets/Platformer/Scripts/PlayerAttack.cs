@@ -38,7 +38,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
-        Debug.Log(spriteRenderer.flipX);
+        //Debug.Log(spriteRenderer.flipX);
         attackPoint.localPosition= new Vector3(spriteRenderer.flipX ? -attackPointDefaultPositionX: attackPointDefaultPositionX, attackPoint.localPosition.y, attackPoint.localPosition.z);
         animator.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -54,6 +54,7 @@ public class PlayerAttack : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-        
     }
+
+
 }
