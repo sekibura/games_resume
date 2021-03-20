@@ -15,7 +15,7 @@ public class HealthSystem : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
     }
 
-   public void Damage(int damageValue)
+   public void ApplyDamage(int damageValue)
     {
         Debug.Log(this.name+" - i was damaged!");
         currentHp -= damageValue;

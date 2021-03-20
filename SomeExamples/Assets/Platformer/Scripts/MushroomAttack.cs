@@ -23,14 +23,10 @@ public class MushroomAttack : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            impulseOnPrey(collision.gameObject);
-            //collision.gameObject.GetComponent<HealthSystem>().Damage(damageValue);
+            collision.GetComponent<PlayerController>().Attacked(); // impulse player
+            //collision.gameObject.GetComponent<HealthSystem>().Damage(damageValue); // 
         }
     }
 
-    private void impulseOnPrey(GameObject gameObject)
-    {
-        gameObject.GetComponent<PlayerController>().Attacked();
-
-    }
+ 
 }
