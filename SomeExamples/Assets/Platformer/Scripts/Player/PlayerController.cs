@@ -128,10 +128,10 @@ public class PlayerController : PhysicObject
 
     private bool IsPossibleToJump()
     {
-        return grounded || Time.time < (_timeLastGrounded + _timeAfterGroundedToJump) || IsGroundNearly();
+        return grounded || Time.time < (_timeLastGrounded + _timeAfterGroundedToJump) || IsGroundNearby();
     }
 
-    private bool IsGroundNearly()
+    private bool IsGroundNearby()
     {
         Collider2D ground = Physics2D.OverlapArea(PointA.transform.position, PointB.transform.position, groundLayers);
         if (ground != null)
