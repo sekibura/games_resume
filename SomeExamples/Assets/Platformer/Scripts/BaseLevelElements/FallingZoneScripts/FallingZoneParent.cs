@@ -9,25 +9,29 @@ public class FallingZoneParent : MonoBehaviour
 
 
     [SerializeField]
-    private Vector3 _offsetValue;
-    private Vector3 _offsetDefaultValue;
+    private float _screenY;
 
-    private CinemachineFreeLook _look;
-    private CinemachineComposer _composer;
+    [SerializeField]
+    private float _ortSize;
+
+    private float _screenYDefault;
+    private float _ortSizeDefault;
+
+    private CinemachineFramingTransposer _cinemachineFramingTransposer;
+    private CinemachineVirtualCamera _vcam;
+
     private void Start()
     {
-        
         Transform start = gameObject.transform.Find("Start");
         Transform finish = gameObject.transform.Find("Finish");
-        GameObject _camera = GameObject.FindWithTag("MainCamera");
+        GameObject _camera = GameObject.FindWithTag("Vcam");
+        
         if (start != null && finish != null && _camera != null)
         {
             _startFall = start.gameObject;
             _endFall = finish.gameObject;
-
-            _look = _camera.GetComponent<CinemachineFreeLook>();
-            _composer = _look.GetRig(1).GetCinemachineComponent<CinemachineComposer>();
-            _offsetDefaultValue = _composer.m_TrackedObjectOffset;
+            _vcam = _camera.GetComponent<CinemachineVirtualCamera>();
+            _cinemachineFramingTransposer = _vcam.GetCinemachineComponent<CinemachineFramingTransposer>();
         }
         else
             Debug.LogError("Triggers of FALLING ZONE not found!");
@@ -36,14 +40,18 @@ public class FallingZoneParent : MonoBehaviour
 
     public void OnStartFalling()
     {
-        Debug.Log("Start falling");
-        _composer.m_TrackedObjectOffset = _offsetValue;
+        _screenYDefault = _cinemachineFramingTransposer.m_ScreenY;
+        _ortSizeDefault = _vcam.m_Lens.OrthographicSize;
+
+        _cinemachineFramingTransposer.m_ScreenY = _screenY;
+        _vcam.m_Lens.OrthographicSize = _ortSize;
+
     }
 
     public void OnFinishFalling()
     {
-        Debug.Log("Finish falling");
-        _composer.m_TrackedObjectOffset = _offsetDefaultValue;
+        _cinemachineFramingTransposer.m_ScreenY = _screenYDefault;
+        _vcam.m_Lens.OrthographicSize = _ortSizeDefault;
     }
 
 }
