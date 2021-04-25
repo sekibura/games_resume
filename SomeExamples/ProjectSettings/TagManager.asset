@@ -7,6 +7,7 @@ TagManager:
   - Vcam
   - Coin
   - CoinsScore
+  - HealthBar
   layers:
   - Default
   - TransparentFX
