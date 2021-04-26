@@ -32,6 +32,8 @@ public class HealthSystem : MonoBehaviour
         if (_currentHp <= 0)
             toDie();
 
+        AudioManager.Instance.Play("PlayerDamage");
+
     }
 
     private void toDie()
@@ -47,6 +49,7 @@ public class HealthSystem : MonoBehaviour
     public void AddHp(int value)
     {
         _currentHp += value;
+        AudioManager.Instance.Play("AddHp");
         _healthBar.IncreaseHealth(value);
         if (_currentHp > _maxHp)
             _currentHp = _maxHp;
@@ -60,4 +63,5 @@ public class HealthSystem : MonoBehaviour
             childCollider.enabled = false;
         }
     }
+
 }

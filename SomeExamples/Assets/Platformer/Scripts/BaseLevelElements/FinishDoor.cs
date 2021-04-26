@@ -37,11 +37,20 @@ public class FinishDoor : MonoBehaviour
     private void MoveToExitDoor(GameObject player)
     {
         if(ExitDoor!=null)
+        {
             player.transform.position = ExitDoor.transform.position;
+            PlaySoundTeleport();
+        }
+
     }
 
     private bool IsThisPlayer(Collider2D collider)
     {
         return collider.gameObject.layer == LayerMask.NameToLayer("Player");
+    }
+
+    private void PlaySoundTeleport()
+    {
+        AudioManager.Instance.Play("Door");
     }
 }

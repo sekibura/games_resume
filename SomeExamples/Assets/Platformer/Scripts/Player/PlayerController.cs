@@ -31,6 +31,8 @@ public class PlayerController : PhysicObject
     public LayerMask groundLayers;
 
 
+
+
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -69,6 +71,8 @@ public class PlayerController : PhysicObject
         if (Input.GetButtonDown("Jump") && IsPossibleToJump())
         {
             velocity.y = _jumpTakeOffSpeed;
+
+            AudioManager.Instance.Play("PlayerJump");
 
             //fix double jump
             _timeLastGrounded = _timeAfterGroundedToJump;

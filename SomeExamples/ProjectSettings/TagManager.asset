@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - CoinsScore
   - HealthBar
+  - Poition
   layers:
   - Default
   - TransparentFX

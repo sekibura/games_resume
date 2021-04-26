@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class KnifeTrapBladesScript : MonoBehaviour
 {
-    private int _damageValue = 20;
+    [SerializeField]
+    private int _damageValue = 1;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

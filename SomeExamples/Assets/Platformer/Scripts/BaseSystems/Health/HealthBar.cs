@@ -19,6 +19,8 @@ public class HealthBar : MonoBehaviour
         else
             _maxHp = 3;
 
+        _hp = _maxHp;
+
         SpawnHearts(_maxHp);
     }
 
@@ -60,12 +62,16 @@ public class HealthBar : MonoBehaviour
 
     private void UpdateBarValue()
     {
+        Debug.Log(_hp);
         for (int i = 0; i < _hearts.Count; i++)
         {
-            if (i > _hp)
+            if (i < _maxHp-_hp)
                 _hearts[i].Broke();
             else 
                 _hearts[i].Alive();
         }
+
+      
+
     }
 }
