@@ -11,6 +11,7 @@ public class HealthSystem : MonoBehaviour
     private Rigidbody2D _rb;
     private Collider2D _collider;
     private HealthBar _healthBar;
+    private GameStateScript _gameStateManager;
  
 
     void Start()
@@ -21,6 +22,8 @@ public class HealthSystem : MonoBehaviour
         _animator = gameObject.GetComponent<Animator>();
         _healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
         _healthBar.Init(_maxHp);
+
+        _gameStateManager = GameObject.FindGameObjectWithTag("GameStateManager").GetComponent<GameStateScript>();
     }
 
    public void ApplyDamage(int damageValue)
@@ -42,7 +45,7 @@ public class HealthSystem : MonoBehaviour
         _collider.enabled = false;
         _rb.gravityScale = 0;        
         _animator.SetTrigger("Dead");
-
+        _gameStateManager.GameOver();
         DisableAllChildColliders();
     }
 

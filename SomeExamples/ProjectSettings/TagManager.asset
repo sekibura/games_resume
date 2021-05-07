@@ -9,6 +9,9 @@ TagManager:
   - CoinsScore
   - HealthBar
   - Poition
+  - PickUpAble
+  - PauseMenu
+  - GameStateManager
   layers:
   - Default
   - TransparentFX

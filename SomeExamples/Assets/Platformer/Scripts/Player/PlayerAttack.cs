@@ -25,20 +25,15 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        if (Time.time>=nextTimeAttack && Input.GetButtonDown("Fire1"))
+        if (Time.time>=nextTimeAttack && Input.GetButtonDown("Fire1") && Time.timeScale!=0)
         {
             nextTimeAttack = Time.time + 1f/attackRate;
             Attack();
         }
-
-
-        
-        
     }
 
     private void Attack()
     {
-        //Debug.Log(spriteRenderer.flipX);
         attackPoint.localPosition= new Vector3(spriteRenderer.flipX ? -attackPointDefaultPositionX: attackPointDefaultPositionX, attackPoint.localPosition.y, attackPoint.localPosition.z);
         animator.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);

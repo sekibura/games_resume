@@ -22,8 +22,6 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-
-
         foreach (Sound s in sounds)
         {
             s.Source = gameObject.AddComponent<AudioSource>();
@@ -37,12 +35,15 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.Name == name);
-        if (s == null)
+        if (Time.timeScale != 0)
         {
-            Debug.LogWarning("Sound " + name + " not found!");
-            return;
+            Sound s = Array.Find(sounds, sound => sound.Name == name);
+            if (s == null)
+            {
+                Debug.LogWarning("Sound " + name + " not found!");
+                return;
+            }
+            s.Source.Play();
         }
-        s.Source.Play();
     }
 }
