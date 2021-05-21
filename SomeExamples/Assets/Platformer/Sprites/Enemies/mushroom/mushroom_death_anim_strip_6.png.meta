@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 14a3e896d2e341d4f8126226bcaabfb6
+guid: 1733c9b1e38d7ac4d82cd1abd7b6ded2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4387502403121105992
-    second: mushroom_crushed_anim_strip_6_0
+      213: 5206564956126562644
+    second: mushroom_death_anim_strip_6_0
   - first:
-      213: 4934098177039159063
-    second: mushroom_crushed_anim_strip_6_1
+      213: -6717368077242981859
+    second: mushroom_death_anim_strip_6_1
   - first:
-      213: -4739746410951811203
-    second: mushroom_crushed_anim_strip_6_2
+      213: -1233924105002390654
+    second: mushroom_death_anim_strip_6_2
   - first:
-      213: -3371635672966405916
-    second: mushroom_crushed_anim_strip_6_3
+      213: 1047379597318944926
+    second: mushroom_death_anim_strip_6_3
   - first:
-      213: 9176025294522152392
-    second: mushroom_crushed_anim_strip_6_4
+      213: 7208966526854931238
+    second: mushroom_death_anim_strip_6_4
   - first:
-      213: -1287735416353423757
-    second: mushroom_crushed_anim_strip_6_5
+      213: -75542863029881708
+    second: mushroom_death_anim_strip_6_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,6 +41,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -72,9 +73,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -117,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mushroom_crushed_anim_strip_6_0
+      name: mushroom_death_anim_strip_6_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b33bc27fc57c13c0800000000000000
-      internalID: -4387502403121105992
+      spriteID: 459cbe5fd3f614840800000000000000
+      internalID: 5206564956126562644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mushroom_crushed_anim_strip_6_1
+      name: mushroom_death_anim_strip_6_1
       rect:
         serializedVersion: 2
         x: 16
@@ -152,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71f42596620797440800000000000000
-      internalID: 4934098177039159063
+      spriteID: d12226ae25d17c2a0800000000000000
+      internalID: -6717368077242981859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mushroom_crushed_anim_strip_6_2
+      name: mushroom_death_anim_strip_6_2
       rect:
         serializedVersion: 2
         x: 32
@@ -173,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7fd8c160c9093eb0800000000000000
-      internalID: -4739746410951811203
+      spriteID: 28b6a89609830eee0800000000000000
+      internalID: -1233924105002390654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mushroom_crushed_anim_strip_6_3
+      name: mushroom_death_anim_strip_6_3
       rect:
         serializedVersion: 2
         x: 48
@@ -194,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e06dc8183b8531d0800000000000000
-      internalID: -3371635672966405916
+      spriteID: e98ff2bc13a098e00800000000000000
+      internalID: 1047379597318944926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mushroom_crushed_anim_strip_6_4
+      name: mushroom_death_anim_strip_6_4
       rect:
         serializedVersion: 2
         x: 64
@@ -215,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c5fdf1836ac75f70800000000000000
-      internalID: 9176025294522152392
+      spriteID: 623aed68cd46b0460800000000000000
+      internalID: 7208966526854931238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mushroom_crushed_anim_strip_6_5
+      name: mushroom_death_anim_strip_6_5
       rect:
         serializedVersion: 2
         x: 80
@@ -236,8 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37e7097267b012ee0800000000000000
-      internalID: -1287735416353423757
+      spriteID: 494b9c39a2e93fef0800000000000000
+      internalID: -75542863029881708
       vertices: []
       indices: 
       edges: []

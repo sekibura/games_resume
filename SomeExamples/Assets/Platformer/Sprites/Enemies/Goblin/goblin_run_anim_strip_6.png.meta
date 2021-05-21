@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: 3315c932b9e79f04791835fc557ecd5c
+guid: 6aa5773f9bf2af143b06fe45ca6280a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4582047702784375593
-    second: mushroom_hit_anim_strip_3_0
+      213: 7259337455025205921
+    second: goblin_run_anim_strip_6_0
   - first:
-      213: 7379812335751801384
-    second: mushroom_hit_anim_strip_3_1
+      213: -6518539027076036504
+    second: goblin_run_anim_strip_6_1
   - first:
-      213: -1342680694609813367
-    second: mushroom_hit_anim_strip_3_2
+      213: 198394849019840942
+    second: goblin_run_anim_strip_6_2
+  - first:
+      213: 2666252742202591669
+    second: goblin_run_anim_strip_6_3
+  - first:
+      213: -3051114520297232633
+    second: goblin_run_anim_strip_6_4
+  - first:
+      213: -2706456956611528699
+    second: goblin_run_anim_strip_6_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,6 +41,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -56,16 +66,19 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -108,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mushroom_hit_anim_strip_3_0
+      name: goblin_run_anim_strip_6_0
       rect:
         serializedVersion: 2
         x: 0
@@ -122,14 +135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d484ab14eb4960c0800000000000000
-      internalID: -4582047702784375593
+      spriteID: 1a2377724f85eb460800000000000000
+      internalID: 7259337455025205921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mushroom_hit_anim_strip_3_1
+      name: goblin_run_anim_strip_6_1
       rect:
         serializedVersion: 2
         x: 16
@@ -143,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82a288d283c5a6660800000000000000
-      internalID: 7379812335751801384
+      spriteID: 868cc94aa4f7985a0800000000000000
+      internalID: -6518539027076036504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mushroom_hit_anim_strip_3_2
+      name: goblin_run_anim_strip_6_2
       rect:
         serializedVersion: 2
         x: 32
@@ -164,8 +177,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980e107a507dd5de0800000000000000
-      internalID: -1342680694609813367
+      spriteID: ea948156017d0c200800000000000000
+      internalID: 198394849019840942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_run_anim_strip_6_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9856c1ebe600520800000000000000
+      internalID: 2666252742202591669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_run_anim_strip_6_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707a5a0628348a5d0800000000000000
+      internalID: -3051114520297232633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin_run_anim_strip_6_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508f845ccbbb07ad0800000000000000
+      internalID: -2706456956611528699
       vertices: []
       indices: 
       edges: []

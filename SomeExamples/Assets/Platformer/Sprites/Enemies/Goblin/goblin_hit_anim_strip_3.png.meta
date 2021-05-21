@@ -1,31 +1,16 @@
 fileFormatVersion: 2
-guid: f9dfcd8ddd6e8aa448fefa63f1bdeee8
+guid: 18d8a4ad501bdd446a5df3c9408d0d0e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3213043600480582373
-    second: bird_idle_anim_strip_8_0
+      213: 4056893406760036682
+    second: goblin_hit_anim_strip_3_0
   - first:
-      213: -4508641593508124757
-    second: bird_idle_anim_strip_8_1
+      213: -7325512602589853777
+    second: goblin_hit_anim_strip_3_1
   - first:
-      213: -7859783773984599856
-    second: bird_idle_anim_strip_8_2
-  - first:
-      213: 8739040261334718995
-    second: bird_idle_anim_strip_8_3
-  - first:
-      213: 1219628742111692023
-    second: bird_idle_anim_strip_8_4
-  - first:
-      213: -5650113870570182938
-    second: bird_idle_anim_strip_8_5
-  - first:
-      213: 534631574021865932
-    second: bird_idle_anim_strip_8_6
-  - first:
-      213: 3651884615572048772
-    second: bird_idle_anim_strip_8_7
+      213: -2067752605208300786
+    second: goblin_hit_anim_strip_3_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -92,7 +77,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,7 +89,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -127,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bird_idle_anim_strip_8_0
+      name: goblin_hit_anim_strip_3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,41 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eabc769126079c20800000000000000
-      internalID: 3213043600480582373
+      spriteID: a496e812f0bfc4830800000000000000
+      internalID: 4056893406760036682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird_idle_anim_strip_8_1
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba7a567cb561e61c0800000000000000
-      internalID: -4508641593508124757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bird_idle_anim_strip_8_2
+      name: goblin_hit_anim_strip_3_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,41 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d0d44cec407ce290800000000000000
-      internalID: -7859783773984599856
+      spriteID: fa70cf4a91d865a90800000000000000
+      internalID: -7325512602589853777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird_idle_anim_strip_8_3
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31a51b6f0de474970800000000000000
-      internalID: 8739040261334718995
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bird_idle_anim_strip_8_4
+      name: goblin_hit_anim_strip_3_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,71 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f48c6b01edfce010800000000000000
-      internalID: 1219628742111692023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bird_idle_anim_strip_8_5
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e6282cce53c691b0800000000000000
-      internalID: -5650113870570182938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bird_idle_anim_strip_8_6
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc1084f75946b6700800000000000000
-      internalID: 534631574021865932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bird_idle_anim_strip_8_7
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48bc2e795b91ea230800000000000000
-      internalID: 3651884615572048772
+      spriteID: e03bb2306fddd43e0800000000000000
+      internalID: -2067752605208300786
       vertices: []
       indices: 
       edges: []

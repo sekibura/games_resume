@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: f9dfcd8ddd6e8aa448fefa63f1bdeee8
+guid: 3881c3f7b7360ed4f99f139b575b7466
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3213043600480582373
-    second: bird_idle_anim_strip_8_0
+      213: 6258348882928458165
+    second: mushroom_walk_anim_strip_8_0
   - first:
-      213: -4508641593508124757
-    second: bird_idle_anim_strip_8_1
+      213: -1700240541789307417
+    second: mushroom_walk_anim_strip_8_1
   - first:
-      213: -7859783773984599856
-    second: bird_idle_anim_strip_8_2
+      213: 5030395815178594903
+    second: mushroom_walk_anim_strip_8_2
   - first:
-      213: 8739040261334718995
-    second: bird_idle_anim_strip_8_3
+      213: -7262816221784533022
+    second: mushroom_walk_anim_strip_8_3
   - first:
-      213: 1219628742111692023
-    second: bird_idle_anim_strip_8_4
+      213: -6502187641634695907
+    second: mushroom_walk_anim_strip_8_4
   - first:
-      213: -5650113870570182938
-    second: bird_idle_anim_strip_8_5
+      213: 7038071649082671908
+    second: mushroom_walk_anim_strip_8_5
   - first:
-      213: 534631574021865932
-    second: bird_idle_anim_strip_8_6
+      213: 3388712834061836074
+    second: mushroom_walk_anim_strip_8_6
   - first:
-      213: 3651884615572048772
-    second: bird_idle_anim_strip_8_7
+      213: -7251899048989260558
+    second: mushroom_walk_anim_strip_8_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -92,7 +92,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,7 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +116,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -127,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bird_idle_anim_strip_8_0
+      name: mushroom_walk_anim_strip_8_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,41 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eabc769126079c20800000000000000
-      internalID: 3213043600480582373
+      spriteID: 5b9d96f962f1ad650800000000000000
+      internalID: 6258348882928458165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird_idle_anim_strip_8_1
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba7a567cb561e61c0800000000000000
-      internalID: -4508641593508124757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bird_idle_anim_strip_8_2
+      name: mushroom_walk_anim_strip_8_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,41 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d0d44cec407ce290800000000000000
-      internalID: -7859783773984599856
+      spriteID: 7ed3ee94c388768e0800000000000000
+      internalID: -1700240541789307417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird_idle_anim_strip_8_3
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31a51b6f0de474970800000000000000
-      internalID: 8739040261334718995
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bird_idle_anim_strip_8_4
+      name: mushroom_walk_anim_strip_8_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,41 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f48c6b01edfce010800000000000000
-      internalID: 1219628742111692023
+      spriteID: 75ae45b775e8fc540800000000000000
+      internalID: 5030395815178594903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird_idle_anim_strip_8_5
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e6282cce53c691b0800000000000000
-      internalID: -5650113870570182938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bird_idle_anim_strip_8_6
+      name: mushroom_walk_anim_strip_8_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc1084f75946b6700800000000000000
-      internalID: 534631574021865932
+      spriteID: 2e79697502b453b90800000000000000
+      internalID: -7262816221784533022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bird_idle_anim_strip_8_7
+      name: mushroom_walk_anim_strip_8_4
       rect:
         serializedVersion: 2
-        x: 56
+        x: 64
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,8 +225,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48bc2e795b91ea230800000000000000
-      internalID: 3651884615572048772
+      spriteID: d15dd6d3ac693c5a0800000000000000
+      internalID: -6502187641634695907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mushroom_walk_anim_strip_8_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423025320e04ca160800000000000000
+      internalID: 7038071649082671908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mushroom_walk_anim_strip_8_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f10105e50270f20800000000000000
+      internalID: 3388712834061836074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mushroom_walk_anim_strip_8_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f48006bc341c5b90800000000000000
+      internalID: -7251899048989260558
       vertices: []
       indices: 
       edges: []

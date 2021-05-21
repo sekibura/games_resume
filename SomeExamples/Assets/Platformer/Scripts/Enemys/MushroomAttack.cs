@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MushroomAttack : MonoBehaviour
 {
-    private int _damageValue = 30;
+    [SerializeField]
+    private int _damageValue = 2;
 
  
     
