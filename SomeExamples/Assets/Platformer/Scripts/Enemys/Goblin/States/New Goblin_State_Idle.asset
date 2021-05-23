@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: New Goblin_State_Idle
   m_EditorClassIdentifier: 
   Character: {fileID: 0}
-  DistancePatrol: 2
+  DistancePatrol: 4

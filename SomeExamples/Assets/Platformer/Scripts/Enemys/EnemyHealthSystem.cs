@@ -10,8 +10,8 @@ public class EnemyHealthSystem : MonoBehaviour
     private Animator _animator;
     private Rigidbody2D _rb;
     private Collider2D _collider;
-    private HealthBar _healthBar;
-    private GameStateScript _gameStateManager;
+    public bool IsAlive { get; private set; }
+
 
 
     void Start()
@@ -20,13 +20,14 @@ public class EnemyHealthSystem : MonoBehaviour
         _collider = gameObject.GetComponent<Collider2D>();
         _currentHp = _maxHp;
         _animator = gameObject.GetComponent<Animator>();
+        IsAlive = true;
 
-
-        _gameStateManager = GameObject.FindGameObjectWithTag("GameStateManager").GetComponent<GameStateScript>();
+       
     }
 
-    public void ApplyDamage(int damageValue)
+    public void ApplyDamage(int damageValue, Vector3 playerPosition)
     {
+        GetDamage(playerPosition);
         Debug.Log(this.name + " - i was damaged!");
         _currentHp -= damageValue;
         _animator.SetTrigger("GetDamage");
@@ -39,20 +40,14 @@ public class EnemyHealthSystem : MonoBehaviour
 
     private void toDie()
     {
+        IsAlive = false;
         Debug.Log("its time to die...");
         _collider.enabled = false;
         _rb.gravityScale = 0;
+        _rb.velocity = new Vector2(0, 0);
         _animator.SetTrigger("Dead");
-
         DisableAllChildColliders();
-    }
 
-    public void AddHp(int value)
-    {
-        _currentHp += value;
-        AudioManager.Instance.Play("AddHp");
-        if (_currentHp > _maxHp)
-            _currentHp = _maxHp;
     }
 
     private void DisableAllChildColliders()
@@ -62,6 +57,12 @@ public class EnemyHealthSystem : MonoBehaviour
         {
             childCollider.enabled = false;
         }
+    }
+
+    private void GetDamage(Vector3 damageSource)
+    {
+        Vector3 direction = new Vector3(damageSource.x > transform.position.x ? -3 : 3, 4, 0);
+        _rb.AddForce(direction, ForceMode2D.Impulse);
     }
 
 }

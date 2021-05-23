@@ -12,6 +12,7 @@ TagManager:
   - PickUpAble
   - PauseMenu
   - GameStateManager
+  - Ground
   layers:
   - Default
   - TransparentFX

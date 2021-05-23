@@ -9,7 +9,7 @@ public class EnemyCharacter : MonoBehaviour
     [SerializeField]
     private State _attackState;
 
-    private float _speed = 1f;
+    //private float _speed = 2f;
 
     private State _currentState;
     [HideInInspector]
@@ -18,17 +18,20 @@ public class EnemyCharacter : MonoBehaviour
     public GameObject Player;
     private SpriteRenderer _spriteRenderer;
     public int Damage = 1;
+    private EnemyHealthSystem _enemyHealthSystem;
     private void Start()
     {
         SetState(_idleState);
         Animator = GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player");
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _enemyHealthSystem = GetComponent<EnemyHealthSystem>();
     }
 
     private void Update()
     {
-        if (!_currentState.IsFinished)
+       // Debug.Log(transform.position - Player.transform.position);
+        if (!_currentState.IsFinished && _enemyHealthSystem.IsAlive)
         {
             _currentState.Run();
         }
@@ -56,16 +59,52 @@ public class EnemyCharacter : MonoBehaviour
 
     private bool IsPlayerNearby()
     {
+        
         return Vector3.Distance(transform.position, Player.transform.position)<5;
     }
 
-    public void MoveTo(Vector3 target)
+    public void MoveTo(Vector3 target, float speed)
     {
-        float step = _speed * Time.deltaTime; 
-        transform.position = Vector3.MoveTowards(transform.position, target, step);
-        if (target.x > transform.position.x)
-            _spriteRenderer.flipX = false;
+        //Animator.SetBool("IdleWalking", true);
+        if (IsWayClear(target))
+        {
+            Animator.SetBool("IdleWalking", true);
+            Animator.SetBool("IdleStay", false);
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target, step);
+
+            if (target.x > transform.position.x)
+                _spriteRenderer.flipX = false;
+            else
+                _spriteRenderer.flipX = true;
+        }
         else
-            _spriteRenderer.flipX = true;
+        {
+           // Debug.Log("way not clear");
+            //Animator.SetTrigger("IdleStay");
+            Animator.SetBool("IdleStay", true);
+            Animator.SetBool("IdleWalking", false);
+        }
+        
     }
+
+    private bool IsWayClear(Vector3 target)
+    {
+        
+        RaycastHit2D forwardRay = Physics2D.Raycast(transform.position, target.x < transform.position.x ? Vector2.left : -Vector2.left, 0.5f);
+       // Debug.DrawRay(transform.position, target.x < transform.position.x ? Vector2.left : -Vector2.left);
+
+        Vector3 dir = new Vector3(target.x < transform.position.x ? -1 : 1, -0.7f, 0);
+        RaycastHit2D groundForward = Physics2D.Raycast(transform.position, dir, 1f);
+       // Debug.DrawRay(transform.position, dir);
+
+
+        if (groundForward.collider != null && forwardRay.collider == null && target!=transform.position)
+            return groundForward.collider.CompareTag("Ground");
+        else
+            return false;
+
+    }   
+
+
 }
