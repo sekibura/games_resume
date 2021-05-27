@@ -10,8 +10,8 @@ public class KnifeTrapBladesScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("attack knides");
-        collision.gameObject.GetComponent<PlayerController>().Attacked(gameObject); // impulse player
-        collision.gameObject.GetComponent<HealthSystem>().ApplyDamage(_damageValue);
+        //collision.gameObject.GetComponent<PlayerController>().Attacked(gameObject); // impulse player
+        collision.gameObject.GetComponent<HealthSystem>().ApplyDamage(_damageValue,gameObject.transform.position);
     }
 
 }

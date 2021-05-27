@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealthSystem : MonoBehaviour
+public class EnemyHealthSystem : Attackable
 {
     [SerializeField]
     private int _maxHp;
@@ -10,6 +10,7 @@ public class EnemyHealthSystem : MonoBehaviour
     private Animator _animator;
     private Rigidbody2D _rb;
     private Collider2D _collider;
+    
     public bool IsAlive { get; private set; }
 
 
@@ -20,13 +21,15 @@ public class EnemyHealthSystem : MonoBehaviour
         _collider = gameObject.GetComponent<Collider2D>();
         _currentHp = _maxHp;
         _animator = gameObject.GetComponent<Animator>();
+        
         IsAlive = true;
 
        
     }
 
-    public void ApplyDamage(int damageValue, Vector3 playerPosition)
+    public override void ApplyDamage(int damageValue, Vector3 playerPosition)
     {
+        Debug.Log(this.name + " - i was damaged!");
         GetDamage(playerPosition);
         Debug.Log(this.name + " - i was damaged!");
         _currentHp -= damageValue;
@@ -35,7 +38,6 @@ public class EnemyHealthSystem : MonoBehaviour
             toDie();
 
         AudioManager.Instance.Play("PlayerDamage");
-
     }
 
     private void toDie()
@@ -47,6 +49,7 @@ public class EnemyHealthSystem : MonoBehaviour
         _rb.velocity = new Vector2(0, 0);
         _animator.SetTrigger("Dead");
         DisableAllChildColliders();
+        
 
     }
 

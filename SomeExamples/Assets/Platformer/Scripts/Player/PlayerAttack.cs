@@ -41,8 +41,8 @@ public class PlayerAttack : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            Debug.Log(enemy.name + " attacked");
-            enemy.GetComponent<EnemyHealthSystem>()?.ApplyDamage(damagePoints,transform.position);
+            Debug.Log(enemy.name + " attacked "+ enemy.GetComponent<Attackable>());
+            enemy.GetComponent<Attackable>()?.ApplyDamage(damagePoints,transform.position);
         }
     }
 

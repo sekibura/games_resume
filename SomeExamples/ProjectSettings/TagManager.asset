@@ -13,6 +13,7 @@ TagManager:
   - PauseMenu
   - GameStateManager
   - Ground
+  - Movable
   layers:
   - Default
   - TransparentFX

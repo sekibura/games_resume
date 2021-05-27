@@ -48,8 +48,8 @@ public class Goblin_State_Attack : State
 
     private void ApplyDamageToPlayer()
     {
-        Character.Player.GetComponent<HealthSystem>().ApplyDamage(0);
-        Character.Player.GetComponent<PlayerController>().Attacked(Character.gameObject);
+        Character.Player.GetComponent<Attackable>().ApplyDamage(0, Character.gameObject.transform.position);
+        //Character.Player.GetComponent<PlayerController>().Attacked(Character.gameObject);
     }
 
     //IEnumerable Finish()

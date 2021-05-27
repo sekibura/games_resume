@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthSystem : MonoBehaviour
+public class HealthSystem : Attackable
 {
     [SerializeField]
     private int _maxHp;
@@ -12,6 +12,7 @@ public class HealthSystem : MonoBehaviour
     private Collider2D _collider;
     private HealthBar _healthBar;
     private GameStateScript _gameStateManager;
+    private PlayerController _controller;
  
 
     void Start()
@@ -22,12 +23,14 @@ public class HealthSystem : MonoBehaviour
         _animator = gameObject.GetComponent<Animator>();
         _healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
         _healthBar.Init(_maxHp);
+        _controller = GetComponent<PlayerController>();
 
         _gameStateManager = GameObject.FindGameObjectWithTag("GameStateManager").GetComponent<GameStateScript>();
     }
 
-   public void ApplyDamage(int damageValue)
+    public override void ApplyDamage(int damageValue, Vector3 playerPosition)
     {
+        _controller.Attacked(playerPosition);
         Debug.Log(this.name+" - i was damaged!");
         _currentHp -= damageValue;
         
@@ -37,7 +40,6 @@ public class HealthSystem : MonoBehaviour
             toDie();
 
         AudioManager.Instance.Play("PlayerDamage");
-
     }
 
     private void toDie()

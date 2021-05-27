@@ -15,8 +15,8 @@ public class MushroomAttack : MonoBehaviour
     {
         if (IsThisPlayer(collision))
         {
-            collision.GetComponent<PlayerController>().Attacked(gameObject); // impulse player
-            collision.gameObject.GetComponent<HealthSystem>().ApplyDamage(_damageValue); // 
+            //collision.GetComponent<PlayerController>().Attacked(gameObject); // impulse player
+            collision.gameObject.GetComponent<HealthSystem>().ApplyDamage(_damageValue,gameObject.transform.position); // 
         }
     }
 

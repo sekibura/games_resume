@@ -97,15 +97,15 @@ public class PlayerController : PhysicObject
         targetVelocity = _move * _maxSpeed;
     }
 
-    public void Attacked(GameObject enemy)
+    public void Attacked(Vector3 enemy)
     {
         
         velocity.y =  _jumpAttacked;
         _shiftStopTime = Time.time + _shiftDuration;
-        _currentShift= enemy.transform.position.x > gameObject.transform.position.x ? -_shift : _shift;
+        _currentShift= enemy.x > gameObject.transform.position.x ? -_shift : _shift;
 
         float _playerX = gameObject.transform.position.x;
-        float _enemyX = enemy.transform.position.x;
+        float _enemyX = enemy.x;
 
         //from left side
         if (_enemyX-_deltaAttackImpactX > _playerX)
