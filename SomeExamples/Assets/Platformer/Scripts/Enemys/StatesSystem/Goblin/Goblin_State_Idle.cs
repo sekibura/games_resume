@@ -21,8 +21,9 @@ public class Goblin_State_Idle : State
         _startPosition = Character.transform.position;
         target = new Vector3(_startPosition.x + _currentShift, _startPosition.y, _startPosition.z);
         IsFinished = false;
-        _prevPosX = Character.transform.position.x;   
-        
+        _prevPosX = Character.transform.position.x;
+        Character.Animator.SetBool("IdleStay", true);
+
     }
     public override void Run()
     {
@@ -53,6 +54,6 @@ public class Goblin_State_Idle : State
     {
         Debug.Log("finished idle");
         IsFinished = true;
-        //Character.Animator.SetBool("IdleWalking", false);
+        Character.Animator.SetBool("IdleStay", false);
     }
 }

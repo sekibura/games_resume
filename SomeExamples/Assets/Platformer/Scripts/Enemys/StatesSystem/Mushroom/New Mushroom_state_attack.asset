@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5c7d4a1a061ed54e8f48dbdf42d5b35, type: 3}
-  m_Name: New Goblin_State_Attack
+  m_Script: {fileID: 11500000, guid: 5543bfc5edccb78428fe53bd167a6b91, type: 3}
+  m_Name: New Mushroom_state_attack
   m_EditorClassIdentifier: 
   Character: {fileID: 0}
-  _attackDistance: 5
+  _attackDistance: 3

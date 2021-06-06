@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class Goblin_State_Attack : State
+public class Mushroom_state_attack : State
 {
     private float _minDistanceToAttack = 1f;
     private GameObject _player;
@@ -19,9 +19,9 @@ public class Goblin_State_Attack : State
 
     public override void Run()
     {
-        
+
         float distance = (Character.transform.position - Character.Player.transform.position).magnitude;
-//        Debug.Log("attack " + distance);
+        //        Debug.Log("attack " + distance);
 
         if (distance < _minDistanceToAttack)
             AttackPlayer();
@@ -29,8 +29,13 @@ public class Goblin_State_Attack : State
             MoveToPlayer();
 
         if (distance >= _attackDistance)
+        {
             IsFinished = true;
+            Character.Animator.SetBool("IdleWalking", false);
+            Character.Animator.SetBool("IdleStay", true);
+        }
             
+
     }
 
     private void MoveToPlayer()
@@ -44,9 +49,9 @@ public class Goblin_State_Attack : State
     private void AttackPlayer()
     {
 
-        Character.Animator.SetTrigger("Attack");
+        //Character.Animator.SetTrigger("Attack");
         ApplyDamageToPlayer();
-                
+
     }
 
     private void ApplyDamageToPlayer()
@@ -54,15 +59,4 @@ public class Goblin_State_Attack : State
         Character.Player.GetComponent<Attackable>().ApplyDamage(0, Character.gameObject.transform.position);
         //Character.Player.GetComponent<PlayerController>().Attacked(Character.gameObject);
     }
-
-    //IEnumerable Finish()
-    //{
-    //    Debug.LogWarning("FINISH");
-    //    _waitForFinish = true;
-    //    Character.MoveTo(Character.transform.position,1);
-    //    yield return new WaitForSeconds(3);
-    //    IsFinished = true;
-        
-    //}
-    
 }

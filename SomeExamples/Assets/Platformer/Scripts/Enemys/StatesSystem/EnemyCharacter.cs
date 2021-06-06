@@ -8,7 +8,8 @@ public class EnemyCharacter : MonoBehaviour
     private State _idleState;
     [SerializeField]
     private State _attackState;
-
+    [SerializeField]
+    private float _attackDistance = 5;
     //private float _speed = 2f;
 
     private State _currentState;
@@ -19,13 +20,15 @@ public class EnemyCharacter : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     public int Damage = 1;
     private EnemyHealthSystem _enemyHealthSystem;
+
     private void Start()
     {
-        SetState(_idleState);
+        
         Animator = GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player");
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _enemyHealthSystem = GetComponent<EnemyHealthSystem>();
+        SetState(_idleState);
     }
 
     private void Update()
@@ -60,7 +63,7 @@ public class EnemyCharacter : MonoBehaviour
     private bool IsPlayerNearby()
     {
         
-        return Vector3.Distance(transform.position, Player.transform.position)<5;
+        return Vector3.Distance(transform.position, Player.transform.position)<_attackDistance;
     }
 
     public void MoveTo(Vector3 target, float speed)
