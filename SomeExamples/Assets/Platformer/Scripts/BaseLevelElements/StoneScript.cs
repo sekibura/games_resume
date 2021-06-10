@@ -5,7 +5,6 @@ using UnityEngine;
 public class StoneScript : Attackable
 {
     private Rigidbody2D _rb;
-    private float _prevVelocity = 0;
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();

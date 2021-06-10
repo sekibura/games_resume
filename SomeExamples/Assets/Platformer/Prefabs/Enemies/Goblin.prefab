@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1257971622874770583}
   m_Layer: 8
   m_Name: Goblin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _idleState: {fileID: 11400000, guid: 3bec201077414df4fb0181cc3a4fe259, type: 2}
   _attackState: {fileID: 11400000, guid: 6d24ae682f657f444be17712e5551547, type: 2}
+  _attackDistance: 5
   Animator: {fileID: 0}
   Player: {fileID: 0}
   Damage: 1

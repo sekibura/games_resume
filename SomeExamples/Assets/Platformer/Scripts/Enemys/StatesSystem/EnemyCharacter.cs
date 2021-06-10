@@ -20,6 +20,7 @@ public class EnemyCharacter : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     public int Damage = 1;
     private EnemyHealthSystem _enemyHealthSystem;
+    private int _myLayer;
 
     private void Start()
     {
@@ -28,7 +29,9 @@ public class EnemyCharacter : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _enemyHealthSystem = GetComponent<EnemyHealthSystem>();
+        _myLayer = gameObject.layer;
         SetState(_idleState);
+
     }
 
     private void Update()
@@ -95,19 +98,30 @@ public class EnemyCharacter : MonoBehaviour
     {
         
         RaycastHit2D forwardRay = Physics2D.Raycast(transform.position, target.x < transform.position.x ? Vector2.left : -Vector2.left, 0.5f);
-       // Debug.DrawRay(transform.position, target.x < transform.position.x ? Vector2.left : -Vector2.left);
+        Debug.DrawRay(transform.position, target.x < transform.position.x ? Vector2.left : -Vector2.left);
 
         Vector3 dir = new Vector3(target.x < transform.position.x ? -1 : 1, -0.7f, 0);
         RaycastHit2D groundForward = Physics2D.Raycast(transform.position, dir, 1f);
-       // Debug.DrawRay(transform.position, dir);
+        Debug.DrawRay(transform.position, dir);
 
+        
 
-        if (groundForward.collider != null && forwardRay.collider == null && target!=transform.position)
-            return groundForward.collider.CompareTag("Ground");
+        if (groundForward.collider != null && (forwardRay.collider == null || forwardRay.collider.CompareTag("Enemy")) && target!=transform.position)
+            return groundForward.collider.CompareTag("Ground")|| groundForward.collider.CompareTag("Enemy");
         else
             return false;
 
     }   
+
+
+    //private bool IsFriendForward(RaycastHit2D hit2D, int Tag)
+    //{
+    //    if (hit2D.collider != null)
+    //        return (hit2D.collider.gameObject.layer == Tag);
+    //    else
+    //        return true;
+            
+    //}
 
 
 }

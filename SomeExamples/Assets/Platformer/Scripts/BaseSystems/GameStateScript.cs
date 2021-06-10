@@ -132,5 +132,4 @@ public class GameStateScript : MonoBehaviour
         yield return new WaitForSeconds(2);
         SetActiveObject(_deathMenu, false);
     }
-
 }

@@ -51,7 +51,7 @@ public class Goblin_State_Attack : State
 
     private void ApplyDamageToPlayer()
     {
-        Character.Player.GetComponent<Attackable>().ApplyDamage(0, Character.gameObject.transform.position);
+        Character.Player.GetComponent<Attackable>().ApplyDamage(Character.Damage, Character.gameObject.transform.position);
         //Character.Player.GetComponent<PlayerController>().Attacked(Character.gameObject);
     }
 

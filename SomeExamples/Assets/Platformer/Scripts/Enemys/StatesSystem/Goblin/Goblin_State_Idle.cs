@@ -47,7 +47,7 @@ public class Goblin_State_Idle : State
 
     private bool IsPlayerNearby()
     {
-        return Vector3.Distance(Character.transform.position, Character.Player.transform.position) < 5;
+        return Character.Player ==null ? false :Vector3.Distance(Character.transform.position, Character.Player.transform.position) < 5;
     }
 
     private void Finish()
