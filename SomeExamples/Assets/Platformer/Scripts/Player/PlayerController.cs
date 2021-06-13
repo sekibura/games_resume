@@ -44,21 +44,31 @@ public class PlayerController : PhysicObject
         SaveTimeAtGround();
         _move = Vector2.zero;
         float _shiftValue = 0f;
-        
-       
+
+        float horizontal = 0f;
+        bool jump = false;
         if (!_isShifting)
         {
-            _move.x = Input.GetAxis("Horizontal");
+
+#if UNITY_ANDROID
+        horizontal = SimpleInput.GetAxis("Horizontal");
+        jump = SimpleInput.GetButtonDown("Jump");
+#else
+            horizontal = Input.GetAxis("Horizontal");
+            jump = Input.GetButtonDown("Jump");
+#endif
+            //_move.x = Input.GetAxis("Horizontal");
+            _move.x = horizontal;
         }       
         //apply attack impulse
         else
         {            
             _shiftValue = Mathf.Lerp(_currentShift, 0, _t);
             _t += _shiftDuration * Time.deltaTime;
-   
-            //_move.x = _shiftValue+ Input.GetAxis("Horizontal");
-            _move.x = _shiftValue + Input.GetAxis("Horizontal");
 
+            //_move.x = _shiftValue+ Input.GetAxis("Horizontal");
+            //_move.x = _shiftValue + Input.GetAxis("Horizontal");
+            _move.x = _shiftValue + horizontal;
             if (Mathf.Abs(_shiftValue) < 0.01)
             {
                 _isShifting = false;
@@ -68,7 +78,7 @@ public class PlayerController : PhysicObject
         }
                         
 
-        if (Input.GetButtonDown("Jump") && IsPossibleToJump())
+        if (jump && IsPossibleToJump())
         {
             velocity.y = _jumpTakeOffSpeed;
 
@@ -77,13 +87,13 @@ public class PlayerController : PhysicObject
             //fix double jump
             _timeLastGrounded = _timeAfterGroundedToJump;
         }
-        else if(Input.GetButtonUp("Jump"))
+        else if(jump)
         {
             if (velocity.y > 0)
                 velocity.y = velocity.y * 0.5f;
         }
 
-        bool flipSprite = (_spriteRenderer.flipX ? (Input.GetAxis("Horizontal") > 0.01f) : (Input.GetAxis("Horizontal") < -0.01f));
+        bool flipSprite = (_spriteRenderer.flipX ? (horizontal > 0.01f) : (horizontal < -0.01f));
         if (flipSprite)
         {
             _spriteRenderer.flipX = !_spriteRenderer.flipX;

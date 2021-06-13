@@ -13,6 +13,9 @@ public class HealthSystem : Attackable
     private HealthBar _healthBar;
     private GameStateScript _gameStateManager;
     private PlayerController _controller;
+
+    private float _deltaDamageTime = 1f;
+    private float _lastDamageTime;
  
 
     void Start()
@@ -25,21 +28,25 @@ public class HealthSystem : Attackable
         _healthBar.Init(_maxHp);
         _controller = GetComponent<PlayerController>();
 
-        _gameStateManager = GameObject.FindGameObjectWithTag("GameStateManager").GetComponent<GameStateScript>();
+        _gameStateManager = GameObject.Find("UI").GetComponent<GameStateScript>();
     }
 
     public override void ApplyDamage(int damageValue, Vector3 playerPosition)
     {
-        _controller.Attacked(playerPosition);
-        Debug.Log(this.name+" - i was damaged!");
-        _currentHp -= damageValue;
+        if (Time.time>_lastDamageTime+_deltaDamageTime)
+        {
+            _lastDamageTime = Time.time;
+            _controller.Attacked(playerPosition);
+            Debug.Log(this.name+" - i was damaged!");
+            _currentHp -= damageValue;
         
-        _healthBar.ApplyDamage(damageValue);
-        _animator.SetTrigger("GetDamage");
-        if (_currentHp <= 0)
-            toDie();
-
-        AudioManager.Instance.Play("PlayerDamage");
+            _healthBar.ApplyDamage(damageValue);
+            _animator.SetTrigger("GetDamage");
+            if (_currentHp <= 0)
+                toDie();
+            AudioManager.Instance.Play("PlayerDamage");
+        }
+        
     }
 
     private void toDie()
@@ -48,25 +55,36 @@ public class HealthSystem : Attackable
         _collider.enabled = false;
         _rb.gravityScale = 0;        
         _animator.SetTrigger("Dead");
-        _gameStateManager.GameOver();
-        DisableAllChildColliders();
+        _gameStateManager.GameOver(true);
+        ChangeAllChildColliders(false);
+    }
+    public void Alive()
+    {
+        _animator.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        _animator.gameObject.GetComponent<Collider2D>().enabled = true;
+        _collider.enabled = true;
+        _rb.gravityScale = 1;
+        _animator.Play("player_idle");
+        _gameStateManager.GameOver(false);
+        ChangeAllChildColliders(true);
+        AddHp(_maxHp);
     }
 
     public void AddHp(int value)
     {
         _currentHp += value;
         AudioManager.Instance.Play("AddHp");
-        _healthBar.IncreaseHealth(value);
         if (_currentHp > _maxHp)
             _currentHp = _maxHp;
+        _healthBar.SetHealth(value);
     }
 
-    private void DisableAllChildColliders()
+    private void ChangeAllChildColliders(bool value)
     {
         Collider2D[] col = gameObject.GetComponentsInChildren<Collider2D>();
         foreach (Collider2D childCollider in col)
         {
-            childCollider.enabled = false;
+            childCollider.enabled = value;
         }
     }
 

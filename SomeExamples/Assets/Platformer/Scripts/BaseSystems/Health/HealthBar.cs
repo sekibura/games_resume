@@ -48,14 +48,11 @@ public class HealthBar : MonoBehaviour
         UpdateBarValue();
     }
 
-    public void IncreaseHealth(int value)
+    public void SetHealth(int value)
     {
         if (value > 0)
         {
-            if (_hp + value <= _maxHp)
-                _hp += value;
-            else
-                _hp = _maxHp;
+            _hp = value;
         }
         UpdateBarValue();
     }

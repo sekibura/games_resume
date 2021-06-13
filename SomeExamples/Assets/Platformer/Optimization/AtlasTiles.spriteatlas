@@ -146,7 +146,15 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a37cc69310c20aa4abf86277015834d9, type: 3}
   - {fileID: 21300000, guid: 8bda2cd32d7d4024387e3d66b541fa99, type: 3}
   - {fileID: 21300000, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
-  - {fileID: 21300000, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
+  - {fileID: -1025206364303375801, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
+  - {fileID: 7320021468835988862, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
+  - {fileID: -3631773759279788581, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
+  - {fileID: -3156708792471914703, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
+  - {fileID: 1016443220868729265, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
+  - {fileID: 7235617779769273252, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
+  - {fileID: -4823007766866782046, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
+  - {fileID: 8202206559644567579, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
+  - {fileID: 1394163118377458480, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
   - {fileID: 21300000, guid: 05e4c1d4d225aa74c95d5298d40f2cbb, type: 3}
   - {fileID: 21300000, guid: cfd602f472c8b064993ef3cfea9d6ddb, type: 3}
   - {fileID: 4379960172882954239, guid: c5b600351aad7de44ace2dffada2b354, type: 3}
@@ -183,7 +191,9 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 953ee008b104d7f499e1342719d510a4, type: 3}
   - {fileID: 21300000, guid: 9f1c604854171f0429b8949749b3f93b, type: 3}
   - {fileID: 21300000, guid: 926b9ec8167b8b6438db2ca12aaf0a99, type: 3}
-  - {fileID: 21300000, guid: eb063c29cac12564a9b54c344edb9ac9, type: 3}
+  - {fileID: -8472866378243816795, guid: eb063c29cac12564a9b54c344edb9ac9, type: 3}
+  - {fileID: -5066322228538487545, guid: eb063c29cac12564a9b54c344edb9ac9, type: 3}
+  - {fileID: -7639937824955634983, guid: eb063c29cac12564a9b54c344edb9ac9, type: 3}
   - {fileID: 344724759789752992, guid: 6598ba8917aaa62458a4755e6751fb03, type: 3}
   - {fileID: 3108213823070245118, guid: 6598ba8917aaa62458a4755e6751fb03, type: 3}
   - {fileID: -2385501237229913374, guid: 6598ba8917aaa62458a4755e6751fb03, type: 3}
@@ -322,7 +332,15 @@ SpriteAtlas:
   - spikes_trap
   - wood_slab_left
   - loot_box_anim_strip_12
-  - save_point_anim_strip_9
+  - save_point_anim_strip_9_7
+  - save_point_anim_strip_9_6
+  - save_point_anim_strip_9_5
+  - save_point_anim_strip_9_4
+  - save_point_anim_strip_9_3
+  - save_point_anim_strip_9_2
+  - save_point_anim_strip_9_1
+  - save_point_anim_strip_9_0
+  - save_point_anim_strip_9_8
   - buttom_pressed
   - fg_1
   - strange_door_closed_anim_strip_10_9
@@ -359,7 +377,9 @@ SpriteAtlas:
   - tiki_torch_props_strip_12
   - waterfall_bottom_anim_strip_4
   - bomb_thrown_anim_strip_3
-  - save_point_saving_anim_strip_3
+  - save_point_saving_anim_strip_3_0
+  - save_point_saving_anim_strip_3_1
+  - save_point_saving_anim_strip_3_2
   - Health_lvl_2
   - Health_lvl_1
   - Health_lvl_0

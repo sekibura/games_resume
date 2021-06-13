@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         if (Instance == null)
             Instance = this;
         else
@@ -31,6 +31,11 @@ public class AudioManager : MonoBehaviour
             s.Source.pitch = s.Pitch;
             s.Source.loop = s.Loop;
         }
+    }
+
+    private void Start()
+    {
+        Instance.Play("BackGroundMusic");
     }
 
     public void Play(string name)

@@ -56,7 +56,7 @@ public class Mushroom_state_attack : State
 
     private void ApplyDamageToPlayer()
     {
-        Character.Player.GetComponent<Attackable>().ApplyDamage(0, Character.gameObject.transform.position);
+        Character.Player.GetComponent<Attackable>().ApplyDamage(Character.Damage, Character.gameObject.transform.position);
         //Character.Player.GetComponent<PlayerController>().Attacked(Character.gameObject);
     }
 }

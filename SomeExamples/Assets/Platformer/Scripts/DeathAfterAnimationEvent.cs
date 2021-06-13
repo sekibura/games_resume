@@ -23,8 +23,6 @@ public class DeathAfterAnimationEvent : StateMachineBehaviour
         animator.gameObject.GetComponent<Collider2D>().enabled = false;
         if (animator.gameObject.layer != LayerMask.NameToLayer("Player"))
         {
-
-         
             Destroy(animator.gameObject);
         }
     }

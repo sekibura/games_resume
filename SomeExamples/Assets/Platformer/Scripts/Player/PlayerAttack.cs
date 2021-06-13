@@ -25,7 +25,14 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        if (Time.time>=nextTimeAttack && Input.GetButtonDown("Fire1") && Time.timeScale!=0)
+        bool fire;
+
+#if UNITY_ANDROID
+        fire = SimpleInput.GetButtonDown("Attack");
+#else
+        fire = Input.GetButtonDown("Fire1");
+#endif
+        if (Time.time>=nextTimeAttack && fire && Time.timeScale!=0)
         {
             nextTimeAttack = Time.time + 1f/attackRate;
             Attack();

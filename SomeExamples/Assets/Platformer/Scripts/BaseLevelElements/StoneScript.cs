@@ -12,7 +12,7 @@ public class StoneScript : Attackable
     public override void ApplyDamage(int damageValue, Vector3 playerPosition)
     {
         int direction = playerPosition.x > transform.position.x ? -1 : 1;
-        _rb.AddForce(new Vector2(150*direction,100), ForceMode2D.Impulse);
+        _rb.AddForce(new Vector2(250*direction,200), ForceMode2D.Impulse);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

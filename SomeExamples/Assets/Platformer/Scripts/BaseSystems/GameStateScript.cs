@@ -12,9 +12,15 @@ public class GameStateScript : MonoBehaviour
     private GameObject _pauseMenu;
     [SerializeField]
     private GameObject _deathMenu;
+    [SerializeField]
+    private GameObject _lvlComletedMenu;
+    private Animator _screenToDark;
+    private GameObject _lastSavePoint;
     private void Start()
     {
+        
         _pickUpAble = GameObject.FindGameObjectWithTag("PickUpAble");
+        _screenToDark = GameObject.Find("ScreenToDark")?.GetComponent<Animator>();
         //_pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         if (_pickUpAble != null)
         {
@@ -41,15 +47,16 @@ public class GameStateScript : MonoBehaviour
         Debug.Log("pause");
     }
 
-    public void GameOver()
+    public void GameOver(bool value)
     {
-        SetActiveObject(_deathMenu, true);
+        SetActiveObject(_deathMenu, value);
     }
 
     public void Restart()
     {
         Debug.Log("restart");
-        StartCoroutine(HideDeathScreen());
+        Time.timeScale = 1;
+        //StartCoroutine(HideDeathScreen());
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
     }
@@ -89,33 +96,21 @@ public class GameStateScript : MonoBehaviour
     }
 
 
-    //private void OnGUI()
-    //{
-    //    Event e = Event.current;
-
-    //    if (e.isKey)
-    //    {
-    //        switch (e.keyCode)
-    //        {
-    //            case KeyCode.Escape:
-    //                SetPause();
-    //                break;
-    //            case KeyCode.R:
-    //                Restart();
-    //                break;
-    //        }
-    //    }
-    //}
-
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        bool esc;
+#if UNITY_ANDROID
+        esc = SimpleInput.GetButtonDown("Pause");
+#else
+        esc = Input.GetKeyDown(KeyCode.Escape);
+#endif
+        if (esc)
         {
             Pause();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Restart();
+            LoadCheckPoint();
         }
     }
 
@@ -132,4 +127,43 @@ public class GameStateScript : MonoBehaviour
         yield return new WaitForSeconds(2);
         SetActiveObject(_deathMenu, false);
     }
+
+    public void LvlCompleted()
+    {
+        StartCoroutine(ShowLvlCompMenu());
+    }
+    private IEnumerator ShowLvlCompMenu()
+    {
+        
+        _screenToDark?.Play("ToDark");
+        yield return new WaitForSeconds(1);
+        GameObject player = GameObject.Find("Player");
+        player?.SetActive(false);
+        _lvlComletedMenu?.SetActive(true);
+        _screenToDark?.Play("ToLight");
+        
+
+        
+    }
+
+    public void SaveGame(GameObject savePoint)
+    {
+        _lastSavePoint = savePoint;
+    }
+
+    public void LoadCheckPoint()
+    {
+        GameObject _player = GameObject.Find("Player");
+        
+
+        if (_lastSavePoint != null)
+        {
+            _player.transform.position = _lastSavePoint.transform.position;
+            _player?.GetComponent<HealthSystem>()?.Alive();
+        }            
+        else
+            Restart();
+
+    }
+   
 }

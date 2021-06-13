@@ -7,6 +7,7 @@ public class FinishDoor : MonoBehaviour
 {
     public bool IsFinishDoor = false;
     public GameObject ExitDoor;
+    private GameStateScript _gameStateScript;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -31,7 +32,9 @@ public class FinishDoor : MonoBehaviour
 
     private void SwitchScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        _gameStateScript = GameObject.Find("UI")?.GetComponent<GameStateScript>();
+        _gameStateScript?.LvlCompleted();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void MoveToExitDoor(GameObject player)
