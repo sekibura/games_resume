@@ -10,12 +10,6 @@ public class MenuScript : MonoBehaviour
     {
         _screenToDarkAnimator = GameObject.Find("ScreenToDark").GetComponent<Animator>();
         _screenToDarkAnimator?.Play("ToLight");
-
-#if UNITY_ANDROID
-        GameObject.Find("AndroidButtons")?.SetActive(true);
-#else
-        GameObject.Find("AndroidButtons")?.SetActive(false);
-#endif
     }
     public void ExitGame()
     {

@@ -59,7 +59,6 @@ public class HealthBar : MonoBehaviour
 
     private void UpdateBarValue()
     {
-        Debug.Log(_hp);
         for (int i = 0; i < _hearts.Count; i++)
         {
             if (i < _maxHp-_hp)

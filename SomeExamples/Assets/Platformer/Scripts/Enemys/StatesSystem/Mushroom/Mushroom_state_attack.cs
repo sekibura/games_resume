@@ -8,10 +8,14 @@ public class Mushroom_state_attack : State
     private float _minDistanceToAttack = 1f;
     private GameObject _player;
     private float _speed = 3f;
+    private float _lastTimeAttack = 0;
 
     [SerializeField]
     private float _attackDistance = 5;
-
+    [SerializeField]
+    private float _attackDelay = 0.5f;
+    [SerializeField]
+    private int _damageValue = 2;
     public override void Init()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
@@ -48,15 +52,17 @@ public class Mushroom_state_attack : State
 
     private void AttackPlayer()
     {
-
-        //Character.Animator.SetTrigger("Attack");
-        ApplyDamageToPlayer();
+        if (Time.time > _lastTimeAttack + _attackDelay)
+        {
+            //Character.Animator.SetTrigger("Attack");
+            ApplyDamageToPlayer();
+        }
 
     }
 
     private void ApplyDamageToPlayer()
     {
-        Character.Player.GetComponent<Attackable>().ApplyDamage(Character.Damage, Character.gameObject.transform.position);
+        Character.Player.GetComponent<Attackable>().ApplyDamage(_damageValue, Character.gameObject.transform.position);
         //Character.Player.GetComponent<PlayerController>().Attacked(Character.gameObject);
     }
 }

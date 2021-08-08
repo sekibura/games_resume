@@ -37,7 +37,7 @@ public class HealthSystem : Attackable
         {
             _lastDamageTime = Time.time;
             _controller.Attacked(playerPosition);
-            Debug.Log(this.name+" - i was damaged!");
+            Debug.Log(this.name+" - i was damaged! == "+damageValue);
             _currentHp -= damageValue;
         
             _healthBar.ApplyDamage(damageValue);
@@ -51,7 +51,7 @@ public class HealthSystem : Attackable
 
     private void toDie()
     {
-        Debug.Log("its time to die...");
+        Debug.Log(gameObject.name+" - its time to die...");
         _collider.enabled = false;
         _rb.gravityScale = 0;        
         _animator.SetTrigger("Dead");

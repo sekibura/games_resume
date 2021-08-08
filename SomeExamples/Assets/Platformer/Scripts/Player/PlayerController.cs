@@ -51,8 +51,8 @@ public class PlayerController : PhysicObject
         {
 
 #if UNITY_ANDROID
-        horizontal = SimpleInput.GetAxis("Horizontal");
-        jump = SimpleInput.GetButtonDown("Jump");
+            horizontal = SimpleInput.GetAxis("Horizontal");
+            jump = SimpleInput.GetButtonDown("Jump");
 #else
             horizontal = Input.GetAxis("Horizontal");
             jump = Input.GetButtonDown("Jump");

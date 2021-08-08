@@ -18,7 +18,7 @@ public class EnemyCharacter : MonoBehaviour
     [HideInInspector]
     public GameObject Player;
     private SpriteRenderer _spriteRenderer;
-    public int Damage = 1;
+    //public int Damage = 1;
     private EnemyHealthSystem _enemyHealthSystem;
     private int _myLayer;
 

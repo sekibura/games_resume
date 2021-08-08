@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 0}
   _attackDistance: 3
+  _attackDelay: 0.5
+  _damageValue: 1
