@@ -37,7 +37,7 @@ public class PopUpMessageWindow : MonoBehaviour
 
     public void ShowMessage(string message)
     {
-        Debug.LogError(message);
+        Debug.LogError("ShowMessage " + message);
         _gameStateScript.PausePlayer(true);
         _animator = gameObject.GetComponent<Animator>();
         _audioSource = gameObject.GetComponent<AudioSource>();
@@ -51,15 +51,15 @@ public class PopUpMessageWindow : MonoBehaviour
 
     private void StartShowMessage(string message)
     {
-        //Debug.LogError("showmessage");
+        Debug.LogError("showmessage");
         List<string> parts = FitTextToParts(message);
-        //Debug.LogError("after fit");
+        Debug.LogError("after fit");
         StartCoroutine(ShowPartOfMessage(parts));
     }
 
     private List<string> FitTextToParts(string text)
     {
-        //Debug.LogError("FIT");
+        Debug.LogError("FIT");
         List<string> parts = new List<string>();
         if(text.Length > _numberLettersInField)
         {
@@ -71,14 +71,18 @@ public class PopUpMessageWindow : MonoBehaviour
                 { 
                     part.Append("...");
                     parts.Add(part.ToString());
-                    //Debug.LogError(part.ToString());
+                    Debug.LogError(part.ToString());
                     part.Clear();
                     part.Append("...");
                 }
                 part.Append(" " + word);
             }
             parts.Add(part.ToString());
-            //Debug.LogError(part.ToString());
+            Debug.LogError(part.ToString());
+        }
+        else
+        {
+            parts.Add(text);
         }
         return parts;
     }
@@ -90,7 +94,7 @@ public class PopUpMessageWindow : MonoBehaviour
         {
             _textField.maxVisibleCharacters = 0;
             _textField.text = part;
-            //Debug.LogError(part);
+            Debug.LogError(part);
            
             int length = _textField.text.Length;
             for (int i = 0; i < length; i++)

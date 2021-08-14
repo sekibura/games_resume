@@ -2,28 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-//using UnityEngine.Localization;
+using UnityEngine.Localization;
 
 public class CollisionTrigger : MonoBehaviour
 {
     public UnityEvent<string> events;
     public bool DoOnce = true;
     private bool _done = false;
-    
-    //public LocalizedString localizedString;
+
+    public LocalizedString localizedString;
     string _message="";
-
-    private void Start()
-    {
-      
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //var localizedText = localizedString.GetLocalizedString();
+        var localizedText = localizedString.GetLocalizedString();
+        _message = localizedText;
+        //Debug.LogError(localizedText);
         //if (localizedText.IsDone)
         //{
-        //    Debug.LogError(localizedText.Result);
+        //    Debug.LogError(localizedText);
         //}
 
         Debug.LogError(_message);
