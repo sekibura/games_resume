@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: New Goblin_State_Attack
   m_EditorClassIdentifier: 
   Character: {fileID: 0}
-  _attackDistance: 5
+  _attackDistance: 6
+  _attackDelay: 0.5
+  _damageValue: 2

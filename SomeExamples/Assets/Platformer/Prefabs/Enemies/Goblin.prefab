@@ -171,7 +171,6 @@ MonoBehaviour:
   _attackDistance: 5
   Animator: {fileID: 0}
   Player: {fileID: 0}
-  Damage: 1
 --- !u!114 &1257971622874770583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,4 +183,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa2e8fe33a7c1842a80256a40a3bcd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHp: 2
+  _maxHp: 10

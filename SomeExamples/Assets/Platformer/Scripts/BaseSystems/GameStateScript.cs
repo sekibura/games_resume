@@ -16,20 +16,25 @@ public class GameStateScript : MonoBehaviour
     private GameObject _lvlComletedMenu;
     private Animator _screenToDark;
     private GameObject _lastSavePoint;
+
+    public bool IsPlayerControlActive { get; set; } = true;
+
+    private PlayerStates _playerStates;
+
     private void Start()
     {
-        
+        _playerStates = GameObject.Find("Player")?.GetComponent<PlayerStates>();
         _pickUpAble = GameObject.FindGameObjectWithTag("PickUpAble");
         _screenToDark = GameObject.Find("ScreenToDark")?.GetComponent<Animator>();
         //_pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         if (_pickUpAble != null)
         {
             _childs = AllChilds(_pickUpAble);
-            Debug.Log(_childs.Count);
+            //Debug.Log(_childs.Count);
         }
     }
 
-    public void Pause()
+    public void PauseMenu()
     {
         if (!_isPaused)
         {
@@ -46,6 +51,28 @@ public class GameStateScript : MonoBehaviour
         }
         Debug.Log("pause");
     }
+
+    public void PauseGame()
+    {
+        if (!_isPaused)
+        {
+            _isPaused = true;
+            Time.timeScale = 0f;
+
+        }
+        else
+        {
+            _isPaused = false;
+            Time.timeScale = 1f;
+        }
+        Debug.Log("pause");
+    }
+
+    public void PausePlayer(bool value)
+    {
+        _playerStates.IsControlEnable = !value;
+    }
+
 
     public void GameOver(bool value)
     {
@@ -106,7 +133,7 @@ public class GameStateScript : MonoBehaviour
 #endif
         if (esc)
         {
-            Pause();
+            PauseMenu();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {

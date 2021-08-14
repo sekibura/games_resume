@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 730424707073028619}
   - component: {fileID: 730424707073028613}
   - component: {fileID: 846465284}
+  - component: {fileID: 5318519211586285984}
   - component: {fileID: 1815893470}
   m_Layer: 9
   m_Name: Player
@@ -241,6 +242,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 2048
+  IsControlActive: 1
 --- !u!61 &730424707073028619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -299,6 +301,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHp: 5
+--- !u!114 &5318519211586285984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730424707073028622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7a65fb77358f847954104abe8f609b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1815893470
 MonoBehaviour:
   m_ObjectHideFlags: 0

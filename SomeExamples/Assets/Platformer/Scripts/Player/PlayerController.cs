@@ -30,17 +30,21 @@ public class PlayerController : PhysicObject
     public Transform PointB;
     public LayerMask groundLayers;
 
-
-
+    
+    private PlayerStates _playerStates;
 
     private void Awake()
     {
+        _playerStates = gameObject.GetComponent<PlayerStates>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
     }
 
     protected override void ComputeVelocity()
     {
+        if (!_playerStates.IsControlEnable)
+            return;
+
         SaveTimeAtGround();
         _move = Vector2.zero;
         float _shiftValue = 0f;

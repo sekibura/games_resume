@@ -51,8 +51,38 @@ MonoBehaviour:
     Source: {fileID: 0}
     Loop: 0
   - Name: PlayerJump
-    Clip: {fileID: 8300000, guid: f08214d8bb20140488b570bb59305d5b, type: 3}
+    Clip: {fileID: 8300000, guid: 36bde75b9bc12db4c8fd27b26dd96478, type: 3}
     Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+    Loop: 0
+  - Name: PlayerDamage
+    Clip: {fileID: 8300000, guid: 8d5fdd4802512684b91474cc0e0aefaa, type: 3}
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+    Loop: 0
+  - Name: Door
+    Clip: {fileID: 8300000, guid: 6ce0b4b1096f62d4586fd992dd79abda, type: 3}
+    Volume: 0.648
+    Pitch: 1
+    Source: {fileID: 0}
+    Loop: 0
+  - Name: AddHp
+    Clip: {fileID: 8300000, guid: 987017082b9f90943a1083fab54e42e4, type: 3}
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+    Loop: 0
+  - Name: BackGroundMusic
+    Clip: {fileID: 8300000, guid: b49cadef09bdc2a4cb9097bddc0d0842, type: 3}
+    Volume: 0.07
+    Pitch: 1
+    Source: {fileID: 0}
+    Loop: 1
+  - Name: switch
+    Clip: {fileID: 8300000, guid: 23ad2bb2258ea35489a70ec299473d3c, type: 3}
+    Volume: 0.07
     Pitch: 1
     Source: {fileID: 0}
     Loop: 0

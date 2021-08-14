@@ -15,9 +15,12 @@ public class PlayerAttack : MonoBehaviour
     public float attackRate = 10f;
     private float nextTimeAttack = 0f;
 
+    private PlayerStates _playerStates;
+
   
     void Start()
     {
+        _playerStates = gameObject.GetComponent<PlayerStates>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = gameObject.GetComponent<Animator>();
         attackPointDefaultPositionX = attackPoint.localPosition.x;
@@ -27,13 +30,13 @@ public class PlayerAttack : MonoBehaviour
     {
         bool fire = false;
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
         fire = Input.GetButtonDown("Fire1");
 #endif
         fire = fire || SimpleInput.GetButtonDown("Attack");
         
 
-        if (Time.time>=nextTimeAttack && fire && Time.timeScale!=0)
+        if (Time.time>=nextTimeAttack && fire && Time.timeScale!=0 && _playerStates.IsControlEnable)
         {
             nextTimeAttack = Time.time + 1f/attackRate;
             Attack();
