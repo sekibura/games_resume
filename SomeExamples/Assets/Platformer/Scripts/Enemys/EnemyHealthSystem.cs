@@ -40,17 +40,18 @@ public class EnemyHealthSystem : Attackable
         AudioManager.Instance.Play("PlayerDamage");
     }
 
-    private void toDie()
+    public virtual void toDie()
     {
         IsAlive = false;
         Debug.Log("its time to die...");
         _collider.enabled = false;
-        _rb.gravityScale = 0;
-        _rb.velocity = new Vector2(0, 0);
+        if (_rb != null)
+        {
+            _rb.gravityScale = 0;
+            _rb.velocity = new Vector2(0, 0);
+        }
         _animator.SetTrigger("Dead");
         DisableAllChildColliders();
-        
-
     }
 
     private void DisableAllChildColliders()
@@ -65,7 +66,8 @@ public class EnemyHealthSystem : Attackable
     private void GetDamage(Vector3 damageSource)
     {
         Vector3 direction = new Vector3(damageSource.x > transform.position.x ? -3 : 3, 4, 0);
-        _rb.AddForce(direction, ForceMode2D.Impulse);
+        if (_rb != null)
+            _rb?.AddForce(direction, ForceMode2D.Impulse);
     }
 
 }

@@ -145,7 +145,18 @@ SpriteAtlas:
   - {fileID: 21300000, guid: cdc9d65393073ea438c032e43ecf3130, type: 3}
   - {fileID: 21300000, guid: a37cc69310c20aa4abf86277015834d9, type: 3}
   - {fileID: 21300000, guid: 8bda2cd32d7d4024387e3d66b541fa99, type: 3}
-  - {fileID: 21300000, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: 127747616880162632, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: 6922721232717073963, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: -759900262063164531, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: 8972576924864895513, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: -7099101872126627206, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: 3319132506117176961, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: -3520161800027418503, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: 1136395886592153752, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: -3552836958836691699, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: -8710947792890429214, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: -8317029841935243477, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
+  - {fileID: 3514091334242821161, guid: e3858264ba76c0b48b836c5afea024ec, type: 3}
   - {fileID: -1025206364303375801, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
   - {fileID: 7320021468835988862, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
   - {fileID: -3631773759279788581, guid: d41a9ea445f8407428e449a3da88f961, type: 3}
@@ -167,7 +178,11 @@ SpriteAtlas:
   - {fileID: 6304945490603593438, guid: c5b600351aad7de44ace2dffada2b354, type: 3}
   - {fileID: 2563540444705329545, guid: c5b600351aad7de44ace2dffada2b354, type: 3}
   - {fileID: 3934809029133181444, guid: c5b600351aad7de44ace2dffada2b354, type: 3}
-  - {fileID: 21300000, guid: 6d7f96453e6e6974eb0340d7c90c1fd0, type: 3}
+  - {fileID: -7310541195514885290, guid: 6d7f96453e6e6974eb0340d7c90c1fd0, type: 3}
+  - {fileID: 8787166213510804534, guid: 6d7f96453e6e6974eb0340d7c90c1fd0, type: 3}
+  - {fileID: -205174907844451088, guid: 6d7f96453e6e6974eb0340d7c90c1fd0, type: 3}
+  - {fileID: -5097765867964552812, guid: 6d7f96453e6e6974eb0340d7c90c1fd0, type: 3}
+  - {fileID: 6289642168156119652, guid: 6d7f96453e6e6974eb0340d7c90c1fd0, type: 3}
   - {fileID: 21300000, guid: 0b8e458566bb93b46a7ecb8b70b2ab72, type: 3}
   - {fileID: 21300000, guid: e27527b56bcd8e2419e789dcb1568557, type: 3}
   - {fileID: 21300000, guid: 44f69a2639667bf409db57e549191014, type: 3}
@@ -209,7 +224,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1c8aa42c99421e7439647cf4d70209a2, type: 3}
   - {fileID: 21300000, guid: 3cbaf34c0b876bc4dad5bf782f9ab546, type: 3}
   - {fileID: 21300000, guid: 0c221e4cbb62b3048b51ae95ba946341, type: 3}
-  - {fileID: 21300000, guid: cbb89f9cc5f6d9d448b7f49715f38bea, type: 3}
+  - {fileID: -4599051473518703982, guid: cbb89f9cc5f6d9d448b7f49715f38bea, type: 3}
+  - {fileID: -7234450013275173696, guid: cbb89f9cc5f6d9d448b7f49715f38bea, type: 3}
+  - {fileID: -6703299274758444182, guid: cbb89f9cc5f6d9d448b7f49715f38bea, type: 3}
+  - {fileID: -6022760946098292197, guid: cbb89f9cc5f6d9d448b7f49715f38bea, type: 3}
+  - {fileID: -1417075945623609898, guid: cbb89f9cc5f6d9d448b7f49715f38bea, type: 3}
+  - {fileID: -4784876724781206110, guid: cbb89f9cc5f6d9d448b7f49715f38bea, type: 3}
   - {fileID: 21300000, guid: a2ef02ac15c4cf241a09456b37a7ad31, type: 3}
   - {fileID: 21300000, guid: 3e9f6fac79042934494b1e4929e0b503, type: 3}
   - {fileID: 21300000, guid: 9b10ce0d22560e0499a56f898563f260, type: 3}
@@ -331,7 +351,18 @@ SpriteAtlas:
   - bigflowers_props
   - spikes_trap
   - wood_slab_left
-  - loot_box_anim_strip_12
+  - loot_box_anim_strip_12_10
+  - loot_box_anim_strip_12_11
+  - loot_box_anim_strip_12_5
+  - loot_box_anim_strip_12_4
+  - loot_box_anim_strip_12_7
+  - loot_box_anim_strip_12_6
+  - loot_box_anim_strip_12_1
+  - loot_box_anim_strip_12_0
+  - loot_box_anim_strip_12_3
+  - loot_box_anim_strip_12_2
+  - loot_box_anim_strip_12_9
+  - loot_box_anim_strip_12_8
   - save_point_anim_strip_9_7
   - save_point_anim_strip_9_6
   - save_point_anim_strip_9_5
@@ -353,7 +384,11 @@ SpriteAtlas:
   - strange_door_closed_anim_strip_10_2
   - strange_door_closed_anim_strip_10_1
   - strange_door_closed_anim_strip_10_0
-  - vase_breaking_anim_strip_5
+  - vase_breaking_anim_strip_5_2
+  - vase_breaking_anim_strip_5_3
+  - vase_breaking_anim_strip_5_0
+  - vase_breaking_anim_strip_5_1
+  - vase_breaking_anim_strip_5_4
   - coin_pickup_anim_strip_6
   - meat_item
   - bg_2
@@ -395,7 +430,12 @@ SpriteAtlas:
   - arrow_plate_left
   - loot_box_open
   - vase
-  - loot_box_anim_opening_strip_6
+  - loot_box_anim_opening_strip_6_5
+  - loot_box_anim_opening_strip_6_4
+  - loot_box_anim_opening_strip_6_1
+  - loot_box_anim_opening_strip_6_0
+  - loot_box_anim_opening_strip_6_3
+  - loot_box_anim_opening_strip_6_2
   - wood_slab_middle
   - health_potion
   - arrow_plate_right

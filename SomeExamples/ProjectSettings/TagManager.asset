@@ -29,7 +29,7 @@ TagManager:
   - PassiveDamageZone
   - Ground
   - PlayerJumpZone
-  - 
+  - IgnorePlayer
   - 
   - 
   - 

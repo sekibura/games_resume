@@ -76,7 +76,7 @@ public class HealthSystem : Attackable
         AudioManager.Instance.Play("AddHp");
         if (_currentHp > _maxHp)
             _currentHp = _maxHp;
-        _healthBar.SetHealth(value);
+        _healthBar.SetHealth(_currentHp);
     }
 
     private void ChangeAllChildColliders(bool value)

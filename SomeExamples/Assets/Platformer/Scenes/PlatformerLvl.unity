@@ -135,26 +135,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1214449065}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &10424300 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8025878008745879757, guid: 15a43a4f359108b42a58fa9d0f16a0d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8025878008716653724}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &10424302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10424300}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5b15934be30e3c40ad56fe4db713fe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1198183058}
-  parallexEffect: 1
 --- !u!1001 &14670162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1180,7 +1160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161554658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8999996, y: 10.39, z: -10}
+  m_LocalPosition: {x: -2.8999999, y: 10.39, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 263606537}
@@ -2815,26 +2795,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &395586869 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8025878009752540488, guid: 15a43a4f359108b42a58fa9d0f16a0d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8025878008716653724}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &395586871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395586869}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5b15934be30e3c40ad56fe4db713fe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1198183058}
-  parallexEffect: 0
 --- !u!1001 &404712138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3606,26 +3566,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca2693ffa0d08c14582dc4d62b12b34a, type: 3}
---- !u!1 &502438739 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8025878009113187616, guid: 15a43a4f359108b42a58fa9d0f16a0d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8025878008716653724}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &502438741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502438739}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5b15934be30e3c40ad56fe4db713fe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1198183058}
-  parallexEffect: 2
 --- !u!4 &502854941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8992227112257965540, guid: 259757364eea06a4bbb3f86497d04a76,
@@ -43986,22 +43926,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c7335c83c192142859d1baca5e0a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  events:
+  _events:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 988435602}
-        m_TargetAssemblyTypeName: PopUpPanelsManager, Assembly-CSharp
-        m_MethodName: OpenPopUpMessage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  DoOnce: 1
+      m_Calls: []
+  _doOnce: 1
+  _done: 0
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
 --- !u!61 &836769614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45324,18 +45261,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca2693ffa0d08c14582dc4d62b12b34a, type: 3}
---- !u!114 &988435602 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6756272204934156355, guid: 03deeb6d3a1be004c940c213ad66c2b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 7845687148400431565}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b5bd8c4c434b74fb5d484d5f70b13d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &994330015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 675645161352224958, guid: 5af3718fb91daf04188924b6350f69c6,
@@ -102131,6 +102056,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4690029361134627964, guid: 03deeb6d3a1be004c940c213ad66c2b8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.0673828
+      objectReference: {fileID: 0}
     - target: {fileID: 7845687148318226629, guid: 03deeb6d3a1be004c940c213ad66c2b8,
         type: 3}
       propertyPath: m_Pivot.x
@@ -102240,6 +102170,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7845687149236282162, guid: 03deeb6d3a1be004c940c213ad66c2b8,
+        type: 3}
+      propertyPath: m_ChildScaleWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7845687149236282162, guid: 03deeb6d3a1be004c940c213ad66c2b8,
+        type: 3}
+      propertyPath: m_ChildScaleHeight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03deeb6d3a1be004c940c213ad66c2b8, type: 3}
@@ -102395,7 +102335,7 @@ PrefabInstance:
     - target: {fileID: 8025878008468375857, guid: 15a43a4f359108b42a58fa9d0f16a0d4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.8999996
+      value: -2.8999999
       objectReference: {fileID: 0}
     - target: {fileID: 8025878008468375857, guid: 15a43a4f359108b42a58fa9d0f16a0d4,
         type: 3}

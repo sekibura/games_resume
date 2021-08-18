@@ -11,7 +11,7 @@ public class ScoreSystem : MonoBehaviour
     private void Start()
     {
         GameObject textObj = GameObject.FindGameObjectWithTag("CoinsScore");
-        _scoreTextField = textObj.GetComponent<TMP_Text>();
+        _scoreTextField = textObj?.GetComponent<TMP_Text>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,9 +25,11 @@ public class ScoreSystem : MonoBehaviour
     }
     private void AddPoint()
     {
-        _score++;
-        SetScore(_score);
-
+        if(_scoreTextField != null)
+        {
+            _score++;
+            SetScore(_score);
+        }
     }
 
     public int GetScore()
@@ -37,7 +39,7 @@ public class ScoreSystem : MonoBehaviour
 
     private void SetScore(int value)
     {
-        if (value >= 0)
+        if (value >= 0 && _scoreTextField != null)
             _scoreTextField.text = value.ToString();
     }
 }

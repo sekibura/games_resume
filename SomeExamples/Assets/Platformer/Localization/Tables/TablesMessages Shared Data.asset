@@ -19,6 +19,34 @@ MonoBehaviour:
     m_Key: Test
     m_Metadata:
       m_Items: []
+  - m_Id: 7300903964672
+    m_Key: 1LVL_MessageTable
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79657811152896
+    m_Key: 2LVL_MessageTable
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81542286774272
+    m_Key: 3LVL_MessageTable
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91704951148544
+    m_Key: '4LVL_MessageTable
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 797201383657472
+    m_Key: '5LVL_MessageTable
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1156271030505472
+    m_Key: 1LVL_PeaceLevels
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

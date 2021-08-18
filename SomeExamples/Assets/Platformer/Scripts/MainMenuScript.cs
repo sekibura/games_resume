@@ -22,7 +22,8 @@ public class MainMenuScript : MonoBehaviour
     IEnumerator LoadGamne()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("PlatformerLvl");
+        //SceneManager.LoadScene("PlatformerLvl");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void ExitGame()

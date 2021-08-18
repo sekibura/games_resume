@@ -8,9 +8,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Platformer/Scenes/MainMenu.unity
     guid: 39c867a81f2e5824e93a77f76c4772bc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Platformer/Scenes/PlatformerLvl.unity
     guid: cfef57306035392499cc79fdb4cf2cf2
+  - enabled: 1
+    path: Assets/Platformer/Scenes/Levels/IntroTutorial/1LVL.unity
+    guid: 1d372a72d4d98a645ac4939ab99e5df4
+  - enabled: 1
+    path: Assets/Platformer/Scenes/Levels/IntroTutorial/2LVL.unity
+    guid: 39e44fc3731f57749966222ff7bae634
+  - enabled: 1
+    path: Assets/Platformer/Scenes/Levels/IntroTutorial/3LVL.unity
+    guid: c58a15f606f12de49902a8bc22feac71
+  - enabled: 1
+    path: Assets/Platformer/Scenes/Levels/IntroTutorial/4LVL.unity
+    guid: 8d1488a9a7b32bc4aacf18822731f197
+  - enabled: 1
+    path: Assets/Platformer/Scenes/Levels/IntroTutorial/5LVL.unity
+    guid: 071b80a3f1e30c34a93c36ea8ca73955
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8a7d2fc8e6031674689080ec63142ad5,
       type: 2}

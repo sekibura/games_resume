@@ -86,3 +86,15 @@ MonoBehaviour:
     Pitch: 1
     Source: {fileID: 0}
     Loop: 0
+  - Name: Vase
+    Clip: {fileID: 8300000, guid: 397e0f1b64174e040a25e0effc3703c6, type: 3}
+    Volume: 0.5
+    Pitch: 1.98
+    Source: {fileID: 0}
+    Loop: 0
+  - Name: Chest
+    Clip: {fileID: 8300000, guid: 61de4827333554d479d40e6a07243329, type: 3}
+    Volume: 0.5
+    Pitch: 3
+    Source: {fileID: 0}
+    Loop: 0

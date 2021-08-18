@@ -36,9 +36,7 @@ public class PopUpMessageWindow : MonoBehaviour
    
 
     public void ShowMessage(string message)
-    {
-        Debug.LogError("ShowMessage " + message);
-        _gameStateScript.PausePlayer(true);
+    {   
         _animator = gameObject.GetComponent<Animator>();
         _audioSource = gameObject.GetComponent<AudioSource>();
         _audioSource.pitch = 2;
@@ -54,6 +52,7 @@ public class PopUpMessageWindow : MonoBehaviour
         Debug.LogError("showmessage");
         List<string> parts = FitTextToParts(message);
         Debug.LogError("after fit");
+        _gameStateScript.PausePlayer(true);
         StartCoroutine(ShowPartOfMessage(parts));
     }
 
@@ -119,6 +118,7 @@ public class PopUpMessageWindow : MonoBehaviour
             yield return new WaitForSeconds(_delayParts);
         }
         _exitButton.SetActive(true);
+        _animator.Play("ShowButton");
     }
 
     public void ExitBtn()

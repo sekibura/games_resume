@@ -20,8 +20,9 @@ public class PoitionScript : MonoBehaviour
         if (collision.transform.tag == "Player")
         {
             _healthSystem.AddHp(_hpValue);
+            gameObject.SetActive(false);
         }
 
-        gameObject.SetActive(false);
+        
     }
 }

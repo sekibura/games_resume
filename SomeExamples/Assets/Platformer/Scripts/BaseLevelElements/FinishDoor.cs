@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class FinishDoor : MonoBehaviour
 {
-    public bool IsFinishDoor = false;
-    public GameObject ExitDoor;
+    [SerializeField]
+    private bool _isFinishDoor = false;
+    [SerializeField]
+    private GameObject _exitDoor;
     private GameStateScript _gameStateScript;
+    [SerializeField]
+    private bool _isActive = true;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (IsThisPlayer(collision))
+        if (IsThisPlayer(collision) && _isActive)
         {
             NextLevel(collision.gameObject);
         }
@@ -24,7 +28,7 @@ public class FinishDoor : MonoBehaviour
         Debug.Log("Switch lvl");
 
         //if last door on level
-        if (IsFinishDoor)
+        if (_isFinishDoor)
             SwitchScene();
         else
             MoveToExitDoor(player);
@@ -34,14 +38,17 @@ public class FinishDoor : MonoBehaviour
     {
         _gameStateScript = GameObject.Find("UI")?.GetComponent<GameStateScript>();
         _gameStateScript?.LvlCompleted();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //if(SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCount-1)
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //else
+        //    SceneManager.LoadScene(0);
     }
 
     private void MoveToExitDoor(GameObject player)
     {
-        if(ExitDoor!=null)
+        if(_exitDoor!=null)
         {
-            player.transform.position = ExitDoor.transform.position;
+            player.transform.position = _exitDoor.transform.position;
             PlaySoundTeleport();
         }
 
@@ -55,5 +62,11 @@ public class FinishDoor : MonoBehaviour
     private void PlaySoundTeleport()
     {
         AudioManager.Instance.Play("Door");
+    }
+
+    public void SetEnable(bool value)
+    {
+        Debug.LogError(gameObject.name + "setEnable" + value);
+        _isActive = value;
     }
 }

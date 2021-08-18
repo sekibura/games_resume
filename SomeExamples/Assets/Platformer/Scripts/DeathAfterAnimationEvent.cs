@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class DeathAfterAnimationEvent : StateMachineBehaviour
 {
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        //animator.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        //animator.gameObject.GetComponent<Collider2D>().enabled = false;
+        //Debug.LogError(stateInfo.length);
+        if (animator.gameObject.layer != LayerMask.NameToLayer("Player"))
+        {
+            Destroy(animator.gameObject, stateInfo.length);
+        }
+    }
+
+  
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -19,13 +27,14 @@ public class DeathAfterAnimationEvent : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        animator.gameObject.GetComponent<Collider2D>().enabled = false;
-        if (animator.gameObject.layer != LayerMask.NameToLayer("Player"))
-        {
-            Destroy(animator.gameObject);
-        }
+        //animator.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        //animator.gameObject.GetComponent<Collider2D>().enabled = false;
+        //if (animator.gameObject.layer != LayerMask.NameToLayer("Player"))
+        //{
+        //    Destroy(animator.gameObject);
+        //}
     }
+
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

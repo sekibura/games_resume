@@ -36,8 +36,11 @@ public class EnemyCharacter : MonoBehaviour
 
     private void Update()
     {
-       // Debug.Log(transform.position - Player.transform.position);
-        if (!_currentState.IsFinished && _enemyHealthSystem.IsAlive)
+        // Debug.Log(transform.position - Player.transform.position);
+        if (!_enemyHealthSystem.IsAlive)
+            return;
+
+        if (!_currentState.IsFinished )
         {
             _currentState.Run();
         }

@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 7299999856541248908}
   - component: {fileID: 7299999856541248911}
   - component: {fileID: 7299999856541248910}
-  - component: {fileID: 7299999856541248905}
-  m_Layer: 0
+  - component: {fileID: 1373156478}
+  - component: {fileID: 3027370518975739324}
+  - component: {fileID: 8682131751538580277}
+  m_Layer: 8
   m_Name: MessageTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05095887, y: 0.45134848}
+  m_Offset: {x: -0.018028736, y: 0.00867781}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,9 +110,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4414039, y: 1.902697}
+  m_Size: {x: 1.0846472, y: 1.0173557}
   m_EdgeRadius: 0
---- !u!114 &7299999856541248905
+--- !u!114 &1373156478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,15 +121,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 7299999856541248904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09c7335c83c192142859d1baca5e0a76, type: 3}
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  events:
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3027370518975739324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7299999856541248904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b0a0b039e481f4680192f445127252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _popUpPanelsManager: {fileID: 0}
+--- !u!114 &8682131751538580277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7299999856541248904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d109b9cf5203044396bba394fe8254e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _events:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PopUpPanelsManager, Assembly-CSharp
-        m_MethodName: OpenPopUpMessage
+      - m_Target: {fileID: 3027370518975739324}
+        m_TargetAssemblyTypeName: MessageTableScript, Assembly-CSharp
+        m_MethodName: ShowMessage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -137,4 +184,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  DoOnce: 1
+  _doOnce: 1
+  _done: 0
