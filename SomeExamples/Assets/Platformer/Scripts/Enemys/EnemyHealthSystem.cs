@@ -70,4 +70,8 @@ public class EnemyHealthSystem : Attackable
             _rb?.AddForce(direction, ForceMode2D.Impulse);
     }
 
+    public override int GetHp()
+    {
+        return _currentHp;
+    }
 }

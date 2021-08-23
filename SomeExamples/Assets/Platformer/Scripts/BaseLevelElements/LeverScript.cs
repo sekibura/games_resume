@@ -33,4 +33,9 @@ public class LeverScript : Attackable
         _animator.SetBool("IsOpen", _isOpen);
         AudioManager.Instance.Play("switch");
     }
+
+    public override int GetHp()
+    {
+        return 0;
+    }
 }

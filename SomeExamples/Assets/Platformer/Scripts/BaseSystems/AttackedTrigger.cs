@@ -21,4 +21,9 @@ public class AttackedTrigger : Attackable
         }
         _done = true;
     }
+
+    public override int GetHp()
+    {
+        return 0;
+    }
 }

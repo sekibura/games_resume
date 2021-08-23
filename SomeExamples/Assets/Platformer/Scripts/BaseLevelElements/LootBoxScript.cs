@@ -42,4 +42,9 @@ public class LootBoxScript : Attackable
         if (rb != null)
             rb?.AddForce(direction, ForceMode2D.Impulse);
     }
+
+    public override int GetHp()
+    {
+        return 0;
+    }
 }

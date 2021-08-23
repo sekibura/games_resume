@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerController : PhysicObject
 {
-    private float _jumpTakeOffSpeed = 10;
-    private float _jumpAttacked = 8;
-    private float _maxSpeed = 7;
+    public PlayerStats CurrentPlayerStats;
+    [SerializeField]
+    private PlayerStats _defaultPlayerStatsDefault;
+    //private float _jumpTakeOffSpeed = 10;
+    //private float _jumpAttacked = 8;
+    //private float _maxSpeed = 7;
 
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
@@ -38,6 +41,7 @@ public class PlayerController : PhysicObject
         _playerStates = gameObject.GetComponent<PlayerStates>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
+        CurrentPlayerStats = _defaultPlayerStatsDefault;
     }
 
     protected override void ComputeVelocity()
@@ -84,7 +88,8 @@ public class PlayerController : PhysicObject
 
         if (jump && IsPossibleToJump())
         {
-            velocity.y = _jumpTakeOffSpeed;
+            //velocity.y = _jumpTakeOffSpeed;
+            velocity.y = CurrentPlayerStats.JumpTakeOffSpeed;
 
             AudioManager.Instance.Play("PlayerJump");
 
@@ -104,17 +109,21 @@ public class PlayerController : PhysicObject
         }
 
         _animator.SetBool("grounded", grounded);
-        _animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / _maxSpeed);
+        //_animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / _maxSpeed);
+        _animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / CurrentPlayerStats.MaxSpeed);
         _animator.SetFloat("velocityY", velocity.y);
         
 
-        targetVelocity = _move * _maxSpeed;
+        //targetVelocity = _move * _maxSpeed;
+        targetVelocity = _move * CurrentPlayerStats.MaxSpeed;
     }
 
     public void Attacked(Vector3 enemy)
     {
-        
-        velocity.y =  _jumpAttacked;
+
+        //velocity.y =  _jumpAttacked;
+        velocity.y = CurrentPlayerStats.JumpAttacked;
+
         _shiftStopTime = Time.time + _shiftDuration;
         _currentShift= enemy.x > gameObject.transform.position.x ? -_shift : _shift;
 
@@ -166,4 +175,22 @@ public class PlayerController : PhysicObject
             Debug.Log("grounded");
         }
     }
+
+    public void SetPlayerStats(PlayerStats stats)
+    {
+        Debug.Log("Set new stat - " + stats.name);
+        CurrentPlayerStats = stats;
+        gravityModifier = stats.GravityModifier;
+        MultipleVelocity(stats.VelocityMultipler);
+
+    }
+
+    public void ResetPlayeStats()
+    {
+        Debug.Log("Reset stats");
+        CurrentPlayerStats = _defaultPlayerStatsDefault;
+        gravityModifier = _defaultPlayerStatsDefault.GravityModifier;
+    }
+
+
 }

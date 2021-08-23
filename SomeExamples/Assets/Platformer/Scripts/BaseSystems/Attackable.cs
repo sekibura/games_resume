@@ -5,4 +5,5 @@ using UnityEngine;
 public abstract class Attackable :MonoBehaviour
 {
     public abstract void ApplyDamage(int damageValue, Vector3 playerPosition);
+    public abstract int GetHp();
 }

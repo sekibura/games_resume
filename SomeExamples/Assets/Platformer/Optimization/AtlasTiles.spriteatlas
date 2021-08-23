@@ -134,7 +134,11 @@ SpriteAtlas:
   - {fileID: 6643189836663336534, guid: 94333a90a50bd124e8407ece5bc59acd, type: 3}
   - {fileID: -2600381812262764595, guid: 94333a90a50bd124e8407ece5bc59acd, type: 3}
   - {fileID: 21300000, guid: 189987a05eddc8e45b30bca25741ff6c, type: 3}
-  - {fileID: 21300000, guid: 53fe2ce096a7d274fa158cf93792899c, type: 3}
+  - {fileID: -8435729451153155773, guid: 53fe2ce096a7d274fa158cf93792899c, type: 3}
+  - {fileID: -8962346280235794574, guid: 53fe2ce096a7d274fa158cf93792899c, type: 3}
+  - {fileID: -4927680323209895411, guid: 53fe2ce096a7d274fa158cf93792899c, type: 3}
+  - {fileID: 4967983725468860517, guid: 53fe2ce096a7d274fa158cf93792899c, type: 3}
+  - {fileID: 6230040908825118304, guid: 53fe2ce096a7d274fa158cf93792899c, type: 3}
   - {fileID: 21300000, guid: c50b5bf0db2ecb94bb2f58671bf1fed4, type: 3}
   - {fileID: 21300000, guid: 6620762190f4bf0438e6d3995d11f8e9, type: 3}
   - {fileID: 21300000, guid: ee2123d14905cee4f936409be862da98, type: 3}
@@ -204,7 +208,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f85724f6a2d06fc4085f5cf8776698f7, type: 3}
   - {fileID: 21300000, guid: 977577075966fa04bbe4ee0bee92512a, type: 3}
   - {fileID: 21300000, guid: 953ee008b104d7f499e1342719d510a4, type: 3}
-  - {fileID: 21300000, guid: 9f1c604854171f0429b8949749b3f93b, type: 3}
+  - {fileID: 8321745751202161220, guid: 9f1c604854171f0429b8949749b3f93b, type: 3}
+  - {fileID: -1668491207813545682, guid: 9f1c604854171f0429b8949749b3f93b, type: 3}
+  - {fileID: -650053425108306497, guid: 9f1c604854171f0429b8949749b3f93b, type: 3}
+  - {fileID: 7809275525601877095, guid: 9f1c604854171f0429b8949749b3f93b, type: 3}
   - {fileID: 21300000, guid: 926b9ec8167b8b6438db2ca12aaf0a99, type: 3}
   - {fileID: -8472866378243816795, guid: eb063c29cac12564a9b54c344edb9ac9, type: 3}
   - {fileID: -5066322228538487545, guid: eb063c29cac12564a9b54c344edb9ac9, type: 3}
@@ -340,7 +347,11 @@ SpriteAtlas:
   - trap_suspended_anim_strip_18_15
   - trap_suspended_anim_strip_18_14
   - spikes_trap_hit_wall_dust_effect_strip_3
-  - orb_collected_anim_strip_5
+  - orb_collected_anim_strip_5_4
+  - orb_collected_anim_strip_5_0
+  - orb_collected_anim_strip_5_1
+  - orb_collected_anim_strip_5_2
+  - orb_collected_anim_strip_5_3
   - bomb_on_ground_anim_strip_8
   - flowers_props
   - orb
@@ -410,7 +421,10 @@ SpriteAtlas:
   - waterfall_anim_strip_4
   - bg_0
   - tiki_torch_props_strip_12
-  - waterfall_bottom_anim_strip_4
+  - waterfall_bottom_anim_strip_4_2
+  - waterfall_bottom_anim_strip_4_3
+  - waterfall_bottom_anim_strip_4_0
+  - waterfall_bottom_anim_strip_4_1
   - bomb_thrown_anim_strip_3
   - save_point_saving_anim_strip_3_0
   - save_point_saving_anim_strip_3_1

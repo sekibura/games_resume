@@ -23,6 +23,8 @@ public class StoneScript : Attackable
             collision.gameObject.GetComponent<Attackable>()?.ApplyDamage(100, transform.position);
     }
 
-
-
+    public override int GetHp()
+    {
+        return 0;
+    }
 }

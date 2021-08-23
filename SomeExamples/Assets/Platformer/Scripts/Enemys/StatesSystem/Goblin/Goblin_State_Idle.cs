@@ -9,6 +9,7 @@ public class Goblin_State_Idle : State
     public float DistancePatrol;
     private Vector3 target;
     private float _currentShift;
+    [SerializeField]
     private float _speed = 2f;
     private float _prevPosX;
     

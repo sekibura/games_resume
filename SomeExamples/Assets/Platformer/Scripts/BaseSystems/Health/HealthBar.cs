@@ -66,8 +66,5 @@ public class HealthBar : MonoBehaviour
             else 
                 _hearts[i].Alive();
         }
-
-      
-
     }
 }

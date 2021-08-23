@@ -95,4 +95,8 @@ public class PhysicObject : MonoBehaviour
         rb2d.position += move.normalized * distance;
     }
 
+    protected void MultipleVelocity(float number)
+    {
+        velocity *= number;
+    }
 }

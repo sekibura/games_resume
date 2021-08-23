@@ -237,12 +237,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
   gravityModifier: 2
+  CurrentPlayerStats: {fileID: 0}
+  _defaultPlayerStatsDefault: {fileID: 11400000, guid: f01feca1eeb414447a5c2516498d4ff9,
+    type: 2}
   PointA: {fileID: 44593893}
   PointB: {fileID: 129675248}
   groundLayers:
     serializedVersion: 2
     m_Bits: 2048
-  IsControlActive: 1
 --- !u!61 &730424707073028619
 BoxCollider2D:
   m_ObjectHideFlags: 0

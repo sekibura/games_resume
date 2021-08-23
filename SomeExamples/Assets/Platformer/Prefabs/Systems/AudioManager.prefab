@@ -98,3 +98,55 @@ MonoBehaviour:
     Pitch: 3
     Source: {fileID: 0}
     Loop: 0
+  _randomSounds:
+  - Name: Bubbles
+    Sounds:
+    - Name: 
+      Clip: {fileID: 8300000, guid: 94245f8727393614485358187b670dca, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 237d129e5ee432941b2c04238483ae2d, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 994543dd07350884aa4273fb9f6bd850, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 76422200903de7a419a6ae7d74879bac, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: d88deed127b55014f891f3126ecffa49, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: acb1c490d91cf2c42b74a0a8dcaf2cd6, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 4393ebf80faa98a4bbd6ddf196b2728a, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 291bfb50ea85d4145a29a0629c0499ff, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+  volume: 1

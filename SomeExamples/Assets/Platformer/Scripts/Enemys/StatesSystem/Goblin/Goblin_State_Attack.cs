@@ -7,6 +7,7 @@ public class Goblin_State_Attack : State
 {
     private float _minDistanceToAttack = 1f;
     private GameObject _player;
+    [SerializeField]
     private float _speed = 3f;
     private float _lastTimeAttack = 0;
     

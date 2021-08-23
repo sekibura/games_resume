@@ -88,4 +88,8 @@ public class HealthSystem : Attackable
         }
     }
 
+    public override int GetHp()
+    {
+        return _currentHp;
+    }
 }
