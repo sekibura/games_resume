@@ -10,10 +10,12 @@ public class LeverScript : Attackable
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
     private bool _isOpen = false;
+    [SerializeField]
+    private GameObject _luke;
 
     private void Start()
     {
-        _animator = transform.parent.transform.Find("Door")?.GetComponent<Animator>();
+        _animator = _luke.GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _offSprite = _spriteRenderer?.sprite;
     }

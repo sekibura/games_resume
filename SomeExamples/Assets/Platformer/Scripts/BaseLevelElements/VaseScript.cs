@@ -13,12 +13,18 @@ public class VaseScript : Attackable
     private Animator _animator;
     [SerializeField]
     private ParticleSystem _particleSystem;
+
+    private bool _done = false;
     private void Start()
     {
         _animator = gameObject.GetComponent<Animator>();
     }
     public override void ApplyDamage(int damageValue, Vector3 playerPosition)
     {
+        if (_done)
+            return;
+        _done = true;
+
         _animator.Play("VaseBroke");
         _particleSystem.Play();
         AudioManager.Instance.Play("Vase");
@@ -54,3 +60,4 @@ public class VaseScript : Attackable
         return 0;
     }
 }
+

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8696073158932408481}
   - component: {fileID: 8696073158932408480}
   - component: {fileID: 8696073158932408484}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: stone
   m_TagString: Movable
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 458edb0070a36e346a65ffe17d5c8c67, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

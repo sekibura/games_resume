@@ -22,12 +22,14 @@ public class DoorButton : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        AudioManager.Instance.PlayRandomSound("StoneDoor");
         _spriteRenderer.sprite = _pressedButton;
         _doorAnimator?.SetBool("IsOpen",true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        AudioManager.Instance.PlayRandomSound("StoneDoor");
         _spriteRenderer.sprite = _unpressedButton;
         _doorAnimator?.SetBool("IsOpen", false);
     }

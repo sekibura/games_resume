@@ -221,7 +221,12 @@ SpriteAtlas:
   - {fileID: -2385501237229913374, guid: 6598ba8917aaa62458a4755e6751fb03, type: 3}
   - {fileID: 21300000, guid: e7348ab968177394cbdd74e2d2f052b6, type: 3}
   - {fileID: 21300000, guid: a6dedfb9ef8e62e47b0fadcde0d30105, type: 3}
-  - {fileID: 21300000, guid: bf3e5ec9104583c4b895e3577b747d5d, type: 3}
+  - {fileID: 1208311632302250947, guid: bf3e5ec9104583c4b895e3577b747d5d, type: 3}
+  - {fileID: 1110349177417635985, guid: bf3e5ec9104583c4b895e3577b747d5d, type: 3}
+  - {fileID: -8039261531825074516, guid: bf3e5ec9104583c4b895e3577b747d5d, type: 3}
+  - {fileID: 4282163756507608773, guid: bf3e5ec9104583c4b895e3577b747d5d, type: 3}
+  - {fileID: -8742651131951515001, guid: bf3e5ec9104583c4b895e3577b747d5d, type: 3}
+  - {fileID: 3523942869914478517, guid: bf3e5ec9104583c4b895e3577b747d5d, type: 3}
   - {fileID: 21300000, guid: 8b6956d983b482b488f4d24c3c8a184c, type: 3}
   - {fileID: 21300000, guid: 93635ff9a52fda346a06f15c9717eab0, type: 3}
   - {fileID: 21300000, guid: 6a4d762a1c9c3a446911096aaf035c7a, type: 3}
@@ -434,7 +439,12 @@ SpriteAtlas:
   - Health_lvl_0
   - lever_turned_right
   - explosion_anim_strip_10
-  - orb_anim_strip_6
+  - orb_anim_strip_6_3
+  - orb_anim_strip_6_2
+  - orb_anim_strip_6_1
+  - orb_anim_strip_6_0
+  - orb_anim_strip_6_5
+  - orb_anim_strip_6_4
   - grass_props
   - background
   - lever_turned_left

@@ -192,5 +192,9 @@ public class PlayerController : PhysicObject
         gravityModifier = _defaultPlayerStatsDefault.GravityModifier;
     }
 
-
+    public void AddJumpImpulse(float force)
+    {
+        Debug.Log("AddJumpImpulse =" + force);
+        velocity.y = CurrentPlayerStats.JumpAttacked + force*0.1f;
+    }
 }

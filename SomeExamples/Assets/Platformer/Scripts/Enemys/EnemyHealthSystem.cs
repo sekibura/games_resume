@@ -6,6 +6,8 @@ public class EnemyHealthSystem : Attackable
 {
     [SerializeField]
     private int _maxHp;
+    [SerializeField]
+    private Vector2 _attackForceJump = new Vector2(3, 4);
     private int _currentHp;
     private Animator _animator;
     private Rigidbody2D _rb;
@@ -65,7 +67,7 @@ public class EnemyHealthSystem : Attackable
 
     private void GetDamage(Vector3 damageSource)
     {
-        Vector3 direction = new Vector3(damageSource.x > transform.position.x ? -3 : 3, 4, 0);
+        Vector3 direction = new Vector3(damageSource.x > transform.position.x ? -_attackForceJump.x : _attackForceJump.x, _attackForceJump.y, 0);
         if (_rb != null)
             _rb?.AddForce(direction, ForceMode2D.Impulse);
     }

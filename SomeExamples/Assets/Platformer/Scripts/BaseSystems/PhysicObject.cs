@@ -99,4 +99,8 @@ public class PhysicObject : MonoBehaviour
     {
         velocity *= number;
     }
+    public Vector2 GetVelocity()
+    {
+        return velocity;
+    }
 }

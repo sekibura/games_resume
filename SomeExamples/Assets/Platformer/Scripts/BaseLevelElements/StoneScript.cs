@@ -17,7 +17,7 @@ public class StoneScript : Attackable
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject+" "+Mathf.Round(_rb.velocity.magnitude));
+        //Debug.Log(collision.gameObject+" "+Mathf.Round(_rb.velocity.magnitude));
         
         if (_rb.velocity.magnitude > 1 && !collision.transform.CompareTag("Player"))
             collision.gameObject.GetComponent<Attackable>()?.ApplyDamage(100, transform.position);

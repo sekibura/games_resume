@@ -8,7 +8,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform attackPoint;
     private float attackPointDefaultPositionX;
     public float attackRange = 0.5f;
-    public LayerMask enemyLayers;
+    public LayerMask[] enemyLayers;
     private SpriteRenderer spriteRenderer;
     public int damagePoints;
 
@@ -47,14 +47,18 @@ public class PlayerAttack : MonoBehaviour
     {
         attackPoint.localPosition= new Vector3(spriteRenderer.flipX ? -attackPointDefaultPositionX: attackPointDefaultPositionX, attackPoint.localPosition.y, attackPoint.localPosition.z);
         animator.SetTrigger("Attack");
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        
-
-        foreach(Collider2D enemy in hitEnemies)
+        foreach (var item in enemyLayers)
         {
-            Debug.Log(enemy.name + " attacked "+ enemy.GetComponent<Attackable>());
-            enemy.GetComponent<Attackable>()?.ApplyDamage(damagePoints,transform.position);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, item);
+
+
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                Debug.Log(enemy.name + " attacked " + enemy.GetComponent<Attackable>());
+                enemy.GetComponent<Attackable>()?.ApplyDamage(damagePoints, transform.position);
+            }
         }
+       
     }
 
     private void OnDrawGizmosSelected()
