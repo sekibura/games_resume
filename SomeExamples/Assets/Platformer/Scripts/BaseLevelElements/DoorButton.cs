@@ -9,14 +9,16 @@ public class DoorButton : MonoBehaviour
     private Sprite _unpressedButton;
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _collider2D;
-    private Animator _doorAnimator;
+    private Animator _animator;
+    [SerializeField]
+    private GameObject _door;
 
     private void Start()
     {
         _collider2D = GetComponent<BoxCollider2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _unpressedButton = _spriteRenderer.sprite;
-        _doorAnimator = gameObject.transform.parent.transform.Find("Door").gameObject.GetComponent<Animator>();
+        _animator = _door.GetComponent<Animator>();
 
     }
 
@@ -24,13 +26,13 @@ public class DoorButton : MonoBehaviour
     {
         AudioManager.Instance.PlayRandomSound("StoneDoor");
         _spriteRenderer.sprite = _pressedButton;
-        _doorAnimator?.SetBool("IsOpen",true);
+        _animator?.SetBool("IsOpen",true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         AudioManager.Instance.PlayRandomSound("StoneDoor");
         _spriteRenderer.sprite = _unpressedButton;
-        _doorAnimator?.SetBool("IsOpen", false);
+        _animator?.SetBool("IsOpen", false);
     }
 }
