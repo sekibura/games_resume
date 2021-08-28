@@ -105,7 +105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d93c4c6d09fed5a4c9e98ba6b88e3702, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pressedButton: {fileID: 21300000, guid: 05e4c1d4d225aa74c95d5298d40f2cbb, type: 3}
+  _door: {fileID: 0}
 --- !u!1 &5878874304149447020
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +287,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 3934809029133181444, guid: c5b600351aad7de44ace2dffada2b354,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -309,7 +310,7 @@ Animator:
   m_GameObject: {fileID: 5878874304400269878}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 51e4b32ea9384dd428b65c49ab0383d1, type: 2}
+  m_Controller: {fileID: 9100000, guid: f2fa8bb86d635ad45b9a02c5714bfd0c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
