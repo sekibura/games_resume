@@ -8,14 +8,19 @@ public class LeverScript : Attackable
     private Sprite _onSprite;
     private Sprite _offSprite;
     private SpriteRenderer _spriteRenderer;
-    private Animator _animator;
+    private List<Animator> _animators = new List<Animator>();
     private bool _isOpen = false;
     [SerializeField]
-    private GameObject _luke;
+    private GameObject[] _lukes;
 
     private void Start()
     {
-        _animator = _luke.GetComponent<Animator>();
+        foreach (GameObject gameobj in _lukes)
+        {
+            Animator animator = gameobj.GetComponent<Animator>();
+            _animators.Add(animator);
+        }
+        
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _offSprite = _spriteRenderer?.sprite;
     }
@@ -32,7 +37,12 @@ public class LeverScript : Attackable
             _spriteRenderer.sprite = _onSprite;
             _isOpen = true;
         }
-        _animator.SetBool("IsOpen", _isOpen);
+
+        foreach (var item in _animators)
+        {
+            item.SetBool("IsOpen", _isOpen);
+        }
+        
         AudioManager.Instance.Play("switch");
     }
 
