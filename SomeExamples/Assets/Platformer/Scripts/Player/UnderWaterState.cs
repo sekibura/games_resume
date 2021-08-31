@@ -24,6 +24,9 @@ public class UnderWaterState : MonoBehaviour
 
     private void UnderwaterBreath()
     {
+        if (_attackable == null)
+            return;
+
         if (_attackable.GetHp() <= 0)
             Destroy(this);
       

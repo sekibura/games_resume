@@ -47,6 +47,7 @@ public class PlayerAttack : MonoBehaviour
     {
         attackPoint.localPosition= new Vector3(spriteRenderer.flipX ? -attackPointDefaultPositionX: attackPointDefaultPositionX, attackPoint.localPosition.y, attackPoint.localPosition.z);
         animator.SetTrigger("Attack");
+        Attackable[] components;
         foreach (var item in enemyLayers)
         {
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, item);
@@ -55,7 +56,12 @@ public class PlayerAttack : MonoBehaviour
             foreach (Collider2D enemy in hitEnemies)
             {
                 Debug.Log(enemy.name + " attacked " + enemy.GetComponent<Attackable>());
-                enemy.GetComponent<Attackable>()?.ApplyDamage(damagePoints, transform.position);
+                //enemy.GetComponent<Attackable>()?.ApplyDamage(damagePoints, transform.position);
+                components = enemy.GetComponents<Attackable>();
+                foreach (var comp in components)
+                {
+                    comp.ApplyDamage(damagePoints, transform.position);
+                }
             }
         }
        
@@ -64,6 +70,7 @@ public class PlayerAttack : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        
     }
 
 

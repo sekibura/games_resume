@@ -4844,3 +4844,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 549a47aa4e34fd94cbcd5714edc2c307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _archimedForce: {fileID: 958136373718466031, guid: 17a9fc9872d1f2e4b8ace8efa64ea87f,
+    type: 3}
+  _playerStat: {fileID: 11400000, guid: 0063802761dffa74c9a356e0f2db6e30, type: 2}

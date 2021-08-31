@@ -13,12 +13,21 @@ public class FinishDoor : MonoBehaviour
     [SerializeField]
     private bool _isActive = true;
 
+    public bool IsReady = true;
+
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (IsThisPlayer(collision) && _isActive)
+        if (IsThisPlayer(collision) && _isActive && IsReady)
         {
             NextLevel(collision.gameObject);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        IsReady = true;
     }
 
     private void NextLevel(GameObject player)
@@ -48,6 +57,7 @@ public class FinishDoor : MonoBehaviour
     {
         if(_exitDoor!=null)
         {
+            _exitDoor.GetComponent<FinishDoor>().IsReady = false;
             player.transform.position = _exitDoor.transform.position;
             PlaySoundTeleport();
         }

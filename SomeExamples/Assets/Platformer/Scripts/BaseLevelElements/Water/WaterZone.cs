@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,11 @@ public class WaterZone : MonoBehaviour
     private float _lastTime;
     [SerializeField]
     private float _forceUp = 1f;
+    [SerializeField]
+    private float _defaultDrag = 1f;
+
+    [SerializeField]
+    private DragTag[] _dragTags;
     [SerializeField]
     private PlayerStats _playerStat;
     private PlayerController _playerController;
@@ -51,7 +57,18 @@ public class WaterZone : MonoBehaviour
 
         var rb = collision.gameObject.GetComponent<Rigidbody2D>();
         if(rb != null)
-            rb.drag = 1;
+        {
+            foreach (var item in _dragTags)
+            {
+                if(item.Tag == collision.gameObject.tag)
+                {
+                    rb.drag = item.DragValue;
+                    break;
+                }
+                rb.drag = _defaultDrag;
+            }
+        }
+            
 
         SetPlayerStats(collision.gameObject);
     }
@@ -106,4 +123,11 @@ public class WaterZone : MonoBehaviour
         }
     }
 
+}
+
+[Serializable]
+public class DragTag
+{
+    public string Tag;
+    public float DragValue;
 }

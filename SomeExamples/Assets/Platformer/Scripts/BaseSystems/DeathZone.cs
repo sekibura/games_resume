@@ -7,6 +7,11 @@ public class DeathZone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Attackable attackable = collision.gameObject.GetComponent<Attackable>();
-        attackable?.ApplyDamage(10000, gameObject.transform.position);
+        if (attackable != null)
+            attackable?.ApplyDamage(10000, gameObject.transform.position);
+        else
+            Destroy(collision.gameObject);
+
+        
     }
 }

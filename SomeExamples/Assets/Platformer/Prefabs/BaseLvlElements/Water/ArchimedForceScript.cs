@@ -18,4 +18,5 @@ public class ArchimedForceScript : MonoBehaviour
         else
             _rb.AddForce(Vector3.up* _force, ForceMode2D.Force);
     }
+
 }

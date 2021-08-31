@@ -15,6 +15,7 @@ TagManager:
   - Ground
   - Movable
   - Enemy
+  - DeadBody
   layers:
   - Default
   - TransparentFX
@@ -31,8 +32,8 @@ TagManager:
   - PlayerJumpZone
   - IgnorePlayer
   - Movable
-  - 
-  - 
+  - Platform
+  - DeadBody
   - 
   - 
   - 

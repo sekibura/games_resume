@@ -18,6 +18,9 @@ public class BrokeAbleSlab : Attackable
     private Rigidbody2D _rb;
 
     private float _lastTime;
+    private BoxCollider2D _collider;
+
+    
 
     private void Start()
     {
@@ -26,6 +29,8 @@ public class BrokeAbleSlab : Attackable
         _lastTime = Time.time;
 
         _particle = gameObject.GetComponent<ParticleSystem>();
+        _rb = GetComponent<Rigidbody2D>();
+        _collider = GetComponent<BoxCollider2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -62,6 +67,8 @@ public class BrokeAbleSlab : Attackable
         }
         else
         {
+            _rb.bodyType = RigidbodyType2D.Dynamic;
+            _collider.enabled = false;
             Destroy(gameObject,0.5f);
         }
     }
