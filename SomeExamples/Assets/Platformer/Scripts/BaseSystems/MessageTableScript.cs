@@ -13,15 +13,27 @@ public class MessageTableScript : MonoBehaviour
     [SerializeField]
     private bool _isHell = false;
 
+
+    private void Start()
+    {
+        Debug.Log(LocalizationSettings.SelectedLocale.ToString());
+        var localizedText = localizedString.GetLocalizedString();
+        _message = localizedText;
+        
+    }
     public void ShowMessage()
     {
         //LocalizationSettings.SelectedLocale = 
-        var localizedText = localizedString.GetLocalizedString();
-        _message = localizedText;
-        if(_isHell)
-            _popUpPanelsManager.OpenPopUpMessageHell(_message);
-        else
-            _popUpPanelsManager.OpenPopUpMessage(_message);
+        //var localizedText = localizedString.GetLocalizedString();
+        //_message = localizedText;
+        if(_message!="" && _message != null)
+        {
+            if (_isHell)
+                _popUpPanelsManager.OpenPopUpMessageHell(_message);
+            else
+                _popUpPanelsManager.OpenPopUpMessage(_message);
+        }
+        
         
     }
 }

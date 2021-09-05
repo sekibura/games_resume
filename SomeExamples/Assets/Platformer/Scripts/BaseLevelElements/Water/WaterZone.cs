@@ -51,8 +51,8 @@ public class WaterZone : MonoBehaviour
         _clientsForces.Add(collision.gameObject, force);
 
         
-        var damage = Instantiate(_underWaterDamage, collision.transform.position, Quaternion.identity, collision.transform);
-        //damage.transform.parent = collision.transform;
+        var damage = Instantiate(_underWaterDamage, collision.transform.position, Quaternion.identity);
+        damage.transform.parent = collision.transform;
         _clientsUnderwaterDamage.Add(collision.gameObject, damage);
 
         var rb = collision.gameObject.GetComponent<Rigidbody2D>();
@@ -94,9 +94,14 @@ public class WaterZone : MonoBehaviour
             Destroy(_clientsForces[collision.gameObject]);
         _clientsForces.Remove(collision.gameObject);
 
-        _clientsUnderwaterDamage[collision.gameObject].GetComponent<UnderWaterState>().ResetBubbles();
-        Destroy(_clientsUnderwaterDamage[collision.gameObject]);
-        _clientsUnderwaterDamage.Remove(collision.gameObject);
+        var underwaterscript = _clientsUnderwaterDamage[collision.gameObject].GetComponent<UnderWaterState>();
+        if (underwaterscript != null)
+        {
+            underwaterscript.ResetBubbles();
+            Destroy(_clientsUnderwaterDamage[collision.gameObject]);
+            _clientsUnderwaterDamage.Remove(collision.gameObject);
+        }
+        
 
         ResetPlayerStats(collision.gameObject);
 

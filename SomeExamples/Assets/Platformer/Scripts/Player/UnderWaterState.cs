@@ -39,8 +39,6 @@ public class UnderWaterState : MonoBehaviour
                 AudioManager.Instance.PlayRandomSound("Bubbles");
                 _bubblesBar.SetBubblesValue(_currentAirPoints);
             }
-                
-
         }
         else
         {

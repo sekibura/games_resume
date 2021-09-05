@@ -6,10 +6,8 @@ public class VaseScript : Attackable
 {
     [SerializeField]
     private GameObject[] _itemList;
-    [SerializeField]
-    private GameObject _concreteItem;
-    [SerializeField]
-    private bool _randomDrop = false;
+    public GameObject ConcreteItem;
+    public bool RandomDrop = false;
     private Animator _animator;
     [SerializeField]
     private ParticleSystem _particleSystem;
@@ -28,7 +26,7 @@ public class VaseScript : Attackable
         _animator.Play("VaseBroke");
         _particleSystem.Play();
         AudioManager.Instance.Play("Vase");
-        if (_randomDrop)
+        if (RandomDrop)
         {
             int itemNumber = Random.Range(0, _itemList.Length);
             Debug.Log(gameObject.name+" drop "+ _itemList[itemNumber].name);
@@ -36,7 +34,7 @@ public class VaseScript : Attackable
         }
         else
         {
-            DropItem(_concreteItem, playerPosition);
+            DropItem(ConcreteItem, playerPosition);
         }
     }
 

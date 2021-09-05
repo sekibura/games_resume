@@ -49,16 +49,16 @@ public class PopUpMessageWindow : MonoBehaviour
 
     private void StartShowMessage(string message)
     {
-        Debug.LogError("showmessage");
+        //Debug.LogError("showmessage");
         List<string> parts = FitTextToParts(message);
-        Debug.LogError("after fit");
+        //Debug.LogError("after fit");
         _gameStateScript.PausePlayer(true);
         StartCoroutine(ShowPartOfMessage(parts));
     }
 
     private List<string> FitTextToParts(string text)
     {
-        Debug.LogError("FIT");
+        //Debug.LogError("FIT");
         List<string> parts = new List<string>();
         if(text.Length > _numberLettersInField)
         {
@@ -93,7 +93,7 @@ public class PopUpMessageWindow : MonoBehaviour
         {
             _textField.maxVisibleCharacters = 0;
             _textField.text = part;
-            Debug.LogError(part);
+            //Debug.LogError(part);
            
             int length = _textField.text.Length;
             for (int i = 0; i < length; i++)

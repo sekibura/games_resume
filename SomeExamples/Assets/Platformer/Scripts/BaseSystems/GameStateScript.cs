@@ -27,6 +27,8 @@ public class GameStateScript : MonoBehaviour
         _pickUpAble = GameObject.FindGameObjectWithTag("PickUpAble");
         _screenToDark = GameObject.Find("ScreenToDark")?.GetComponent<Animator>();
         //_pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+
+
         if (_pickUpAble != null)
         {
             _childs = AllChilds(_pickUpAble);
@@ -161,16 +163,13 @@ public class GameStateScript : MonoBehaviour
     }
     private IEnumerator ShowLvlCompMenu()
     {
-        
         _screenToDark?.Play("ToDark");
         yield return new WaitForSeconds(1);
         GameObject player = GameObject.Find("Player");
         player?.SetActive(false);
         _lvlComletedMenu?.SetActive(true);
         _screenToDark?.Play("ToLight");
-        
 
-        
     }
 
     public void SaveGame(GameObject savePoint)
@@ -182,15 +181,20 @@ public class GameStateScript : MonoBehaviour
     {
         GameObject _player = GameObject.Find("Player");
         
-
         if (_lastSavePoint != null)
         {
             _player.transform.position = _lastSavePoint.transform.position;
             _player?.GetComponent<HealthSystem>()?.Alive();
+            _player?.GetComponent<HealthSystem>()?.ResetHP(); //reset hp
+            PauseMenu();
+            //GameObject underwaterObj = _player.transform.
+            //destroy underwater
+
+
         }            
         else
             Restart();
-
+        
     }
    
 }

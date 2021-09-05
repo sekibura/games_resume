@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Platformer/Scenes/Levels/GameLevels/1_2_2_PeaceLevel.unity
     guid: 171de914f2b652e4e96b66a25b56aad9
+  - enabled: 0
+    path: Assets/Platformer/Scenes/Levels/GameLevels/1_2_2_PeaceLevelTEST_WITHOUT_PLAYER.unity
+    guid: c70c89a3791df53468a9fa2d2de52790
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8a7d2fc8e6031674689080ec63142ad5,
       type: 2}

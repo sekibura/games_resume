@@ -9,7 +9,7 @@ public class BloodZone : MonoBehaviour
     {
         if(collision.tag == "DeadBody")
         {
-            collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+            //collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
         }
 
     }

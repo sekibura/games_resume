@@ -10,6 +10,9 @@ public class GlobalGameSettings : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
+        Screen.sleepTimeout = 120;
+
         DontDestroyOnLoad(gameObject);
         if (Instance == null)
             Instance = this;

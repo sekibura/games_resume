@@ -7,11 +7,25 @@ public class ScoreSystem : MonoBehaviour
 {
     private int _score = 0;
     private TMP_Text _scoreTextField;
+    private int _allCoinsCount = 0;
 
     private void Start()
     {
         GameObject textObj = GameObject.FindGameObjectWithTag("CoinsScore");
         _scoreTextField = textObj?.GetComponent<TMP_Text>();
+
+        //coins counting
+        _allCoinsCount = GameObject.FindGameObjectsWithTag("Coin").Length;
+        var PickAbleObjects = GameObject.FindGameObjectsWithTag("PickUpAble");
+        foreach (var item in PickAbleObjects)
+        {
+            VaseScript vaseScript = item.GetComponent<VaseScript>();
+            if (vaseScript != null)
+                if (!vaseScript.RandomDrop && vaseScript.ConcreteItem.name == "Coin")
+                    _allCoinsCount++;
+        }
+        SetScore(_score, _allCoinsCount);
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,7 +42,7 @@ public class ScoreSystem : MonoBehaviour
         if(_scoreTextField != null)
         {
             _score++;
-            SetScore(_score);
+            SetScore(_score,_allCoinsCount);
         }
     }
 
@@ -37,10 +51,10 @@ public class ScoreSystem : MonoBehaviour
         return _score;
     }
 
-    private void SetScore(int value)
+    private void SetScore(int value, int max)
     {
         if (value >= 0 && _scoreTextField != null)
-            _scoreTextField.text = value.ToString();
+            _scoreTextField.text = value.ToString()+"/"+ max;
     }
 }
 

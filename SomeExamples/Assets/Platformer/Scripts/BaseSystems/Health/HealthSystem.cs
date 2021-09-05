@@ -79,6 +79,8 @@ public class HealthSystem : Attackable
         _healthBar.SetHealth(_currentHp);
     }
 
+  
+
     private void ChangeAllChildColliders(bool value)
     {
         Collider2D[] col = gameObject.GetComponentsInChildren<Collider2D>();
@@ -91,5 +93,11 @@ public class HealthSystem : Attackable
     public override int GetHp()
     {
         return _currentHp;
+    }
+
+    public void ResetHP()
+    {
+        _currentHp = _maxHp;
+        _healthBar.SetHealth(_currentHp);
     }
 }

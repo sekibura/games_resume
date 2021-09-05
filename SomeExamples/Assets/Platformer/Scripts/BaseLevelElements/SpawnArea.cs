@@ -28,6 +28,7 @@ public class SpawnArea : MonoBehaviour
     private bool _onStart;
 
     [SerializeField]
+    [Tooltip("Спавнить шагами или рандомно")]
     private bool _stepsInX;
     [SerializeField]
     private int _stepsCount;
@@ -39,7 +40,9 @@ public class SpawnArea : MonoBehaviour
     private float _x;
     float stepSize;
 
-
+    [SerializeField]
+    [Tooltip("Придавать ли рандомное вращение объектам")]
+    private bool _isAddRotation = false;
 
 
     private void Start()
@@ -90,6 +93,12 @@ public class SpawnArea : MonoBehaviour
             float Y = Random.Range(gameObject.transform.position.y - _areaSize.y / 2, gameObject.transform.position.y + _areaSize.y / 2);
             Vector3 pos = new Vector3(_x, Y, gameObject.transform.position.z);
             GameObject spawned = Instantiate(_objectForSpawn, pos, Quaternion.identity);
+
+            if (_isAddRotation)
+            {
+                spawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-20, 20));
+            }
+
             int angle = 0;
             if (Random.Range(0, 2) == 1)
                 angle = 90;
@@ -99,6 +108,10 @@ public class SpawnArea : MonoBehaviour
             yield return new WaitForSecondsRealtime(_repeatRate);
         }
     }
+
+
+
+   
 
     void OnDrawGizmosSelected()
     {

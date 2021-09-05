@@ -10,7 +10,9 @@ public class UnderWaterBubbleForceZone : MonoBehaviour
     [SerializeField]
     private GameObject _archimedForce;
     [SerializeField]
-    private PlayerStats _playerStat;
+    private PlayerStats _playerStatBubbles;
+    [SerializeField]
+    private PlayerStats _underwaterstat;
     private PlayerController _playerController;
 
     [SerializeField]
@@ -63,7 +65,7 @@ public class UnderWaterBubbleForceZone : MonoBehaviour
         //if (rb != null)
         //    rb.drag = 1;
 
-        SetPlayerStats(collision.gameObject);
+        SetPlayerStats(collision.gameObject,_playerStatBubbles);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -78,17 +80,18 @@ public class UnderWaterBubbleForceZone : MonoBehaviour
             Destroy(_clientsForces[collision.gameObject]);
         _clientsForces.Remove(collision.gameObject);
 
-        ResetPlayerStats(collision.gameObject);
+        SetPlayerStats(collision.gameObject, _underwaterstat);
+        //ResetPlayerStats(collision.gameObject);
 
     }
 
-    private void SetPlayerStats(GameObject collisionObject)
+    private void SetPlayerStats(GameObject collisionObject, PlayerStats stat)
     {
         if (collisionObject.transform.CompareTag("Player"))
         {
             _playerController = collisionObject.GetComponent<PlayerController>();
             if (_playerController != null)
-                _playerController.SetPlayerStats(_playerStat);
+                _playerController.SetPlayerStats(stat);
         }
     }
 
@@ -110,8 +113,9 @@ public class UnderWaterBubbleForceZone : MonoBehaviour
         foreach (var item in _clientsForces)
         {
             Destroy(item.Value);
-            if(item.Key.tag == "Player")
-                item.Key.GetComponent<PlayerController>().ResetPlayeStats();
+            if (item.Key.tag == "Player")
+                SetPlayerStats(item.Key, _underwaterstat);
+                //item.Key.GetComponent<PlayerController>().ResetPlayeStats();
         }
         _clientsForces.Clear();
         _done = true;
