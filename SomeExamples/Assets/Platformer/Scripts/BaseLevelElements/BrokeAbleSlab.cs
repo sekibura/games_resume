@@ -68,6 +68,8 @@ public class BrokeAbleSlab : Attackable
         else
         {
             _rb.bodyType = RigidbodyType2D.Dynamic;
+            Random.seed = System.DateTime.Now.Millisecond;
+            _rb.AddTorque(Random.Range(-1f, 1f), ForceMode2D.Impulse);
             _collider.enabled = false;
             Destroy(gameObject,0.5f);
         }

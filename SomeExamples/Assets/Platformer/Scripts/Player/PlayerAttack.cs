@@ -45,6 +45,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
+        
+
         attackPoint.localPosition= new Vector3(spriteRenderer.flipX ? -attackPointDefaultPositionX: attackPointDefaultPositionX, attackPoint.localPosition.y, attackPoint.localPosition.z);
         animator.SetTrigger("Attack");
         Attackable[] components;
@@ -52,6 +54,10 @@ public class PlayerAttack : MonoBehaviour
         {
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, item);
 
+            if(hitEnemies.Length>0)
+                AudioManager.Instance.PlayRandomSound("Hurt");
+            else
+                AudioManager.Instance.PlayRandomSound("Punch");
 
             foreach (Collider2D enemy in hitEnemies)
             {

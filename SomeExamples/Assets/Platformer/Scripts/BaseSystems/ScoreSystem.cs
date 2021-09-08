@@ -34,7 +34,8 @@ public class ScoreSystem : MonoBehaviour
             //Destroy(collision.gameObject);
             collision.gameObject.SetActive(false);
             AddPoint();
-            FindObjectOfType<AudioManager>().Play("Coin");
+            //FindObjectOfType<AudioManager>().Play("Coin");
+            AudioManager.Instance.PlayRandomSound("CoinsPickUp");
         }
     }
     private void AddPoint()

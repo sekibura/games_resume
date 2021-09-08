@@ -58,7 +58,7 @@ MonoBehaviour:
     Loop: 0
   - Name: PlayerDamage
     Clip: {fileID: 8300000, guid: 8d5fdd4802512684b91474cc0e0aefaa, type: 3}
-    Volume: 1
+    Volume: 0.2
     Pitch: 1
     Source: {fileID: 0}
     Loop: 0
@@ -165,4 +165,466 @@ MonoBehaviour:
       Source: {fileID: 0}
       Loop: 0
     volume: 1
+  - Name: CoinsPickUp
+    Sounds:
+    - Name: 
+      Clip: {fileID: 8300000, guid: 72e36fe97e4b92340bf419d6de2237f6, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 90aa54ed379f0bd47bf482ccb72b207f, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 05c35e09d8a5c18479d22e430da05b18, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 790cb245f4814ec4498050cf7b17753e, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 36d87c29f739ae64ca0304e3d935d7aa, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 84243720cdeb47d41860b29308b8b7b3, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    volume: 0.1
+  - Name: Punch
+    Sounds:
+    - Name: 
+      Clip: {fileID: 8300000, guid: c68cbcfd70e59df4b8626af95660069f, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 538ca46a6e3c1e049b38589e3465c286, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 275ce1f14a5db994facbfd5daef26071, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 5ee6147898f052c46aa15835479cd18e, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    volume: 0.1
+  - Name: Death
+    Sounds:
+    - Name: 
+      Clip: {fileID: 8300000, guid: 2269902a8caf1da41aaa0933dbeaad54, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 1c80b378a00d1854c839a63fdd6411c2, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 4277451016ea5a54bb3b44d523aaca2a, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 002867a78f6e8854db596b472e5c00d9, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 958f88e1a9a97f940a06a79f769e1e1b, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 02cea33d4bfbb074dae7303102e4835b, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 5477f3ad02b732d40b89ad42b50eb787, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 69a193a19bbbb5640b1e6098c9e11405, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 1c26eae7c4815dc48811f255c40a370c, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: ef896f0cf2319744ea07f57bec65b617, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 133a363972db7e8468c24c61d9b3cea6, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: fa454f558bbbd0a48b052ff007a3317b, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 4ad3b6fa48204c34b80937af32d2491e, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 22d1c2ab449d18c438d6168d76f6c8dc, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    volume: 0.2
+  - Name: Fall
+    Sounds:
+    - Name: 
+      Clip: {fileID: 8300000, guid: 8aef9fd2d40623044b0513653d78ff49, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 5446bdaf6ded12c498eaccc4309b3240, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: d600bb43135e1bf44aabe9ad91115d1d, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 484f65036693afa4fafc83925412e8c6, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: b31055e888ee4544ab5615a6a07d4c46, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: d1511d76d26444b418421159f1e2d43e, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 32e44e952d37644498323288f002ba0b, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 9d8b4308c2abc5949af8fba5be74ed6a, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    volume: 1
+  - Name: GameOver
+    Sounds:
+    - Name: 
+      Clip: {fileID: 8300000, guid: e1277259e75795043bad2a422fd6c103, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: e3748dae0e4adb04089f0d31a5e2c212, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 852dd8cc0e1b8034ba5e1d37a9317d71, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 8034b4c9f1d1577479c35f5bed50a928, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 3d20a3cca60f07f459c442759a6cbb9f, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 8e13166cb8f859544b731cbf3da16d05, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 84a2c3ff19112c845b0fc75e902223c5, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: d291a7c6a548ab147958ace946189894, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 0db41ef52c2f7ed4bba221a9cdbc0133, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 100d41ec0dc91664b845b98a229a1206, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 4d918a64f7cc5d14db5a45ff6593dfdf, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 74a1c96b8ce8b85418ff7d12a8d03b66, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: c7c4a0afb63dd8c4d8d9799dea23d162, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 71f38304d138086429fce26ddc4658d3, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: ee74031633fe04f4c9f0b314f844f334, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 4772603353cd23643a97dce5a5184a34, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    volume: 1
+  - Name: GameStart
+    Sounds:
+    - Name: 
+      Clip: {fileID: 8300000, guid: 7b920dbec859d2241b691edf3b9ad8c6, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: ed43f984cd2a0434f9d954677dc0945b, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 0571709f3ccd2ed4da30e90d2b518c19, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 7c5d05ed8f3b2544aa5f00434acd2cab, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: e33f6fc33e85efe4baea5d8c1fcbb539, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 50c9113858d685449b9026891a752bfd, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 37286bc89fbcf754cb49a485f63add32, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: cda9cb301a6fe64419e420493377d34d, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: eae0422a3f488434c9293c99c55cbd50, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 41f2705c3e1cda54c8fe6c03da209f2b, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 8918117da90c99f439dcc0dcdd3b22e3, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: fd14a9fe6004d774996e46286ef35b73, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    volume: 1
+  - Name: Hurt
+    Sounds:
+    - Name: 
+      Clip: {fileID: 8300000, guid: dc92b150429ca8d41a1592f5854ee848, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: a1b7e47fa535f4e47bf8c8d6f6a06acc, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 84c005b19bcf60a408cfa4f0c0524fde, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: f9ef138702e03c94b8ee2ff96919f0a3, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    volume: 1
+  - Name: Jump
+    Sounds:
+    - Name: 
+      Clip: {fileID: 8300000, guid: df31493148bf70d48916cc766a42cbc8, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 34ba34a9e19e1174986872c61af35599, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: cc1a2b88a94e7d144bffeb9a8a559323, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: b7e0b5696d8122e46a3dd399554f403f, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 9f2128973e1f39f478a938ee0b325588, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 397c681b13e5e8f4e8c05744d48abab6, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: da5c4eb8b2604734791aacb8f599c221, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: c2c4f824c0e7e88478167f1a9a970dfd, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    - Name: 
+      Clip: {fileID: 8300000, guid: 5e19a4d2c454e684ab4282f5b49c7493, type: 3}
+      Volume: 1
+      Pitch: 1
+      Source: {fileID: 0}
+      Loop: 0
+    volume: 0.1
   volume: 1

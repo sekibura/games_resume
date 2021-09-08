@@ -44,6 +44,7 @@ public class EnemyHealthSystem : Attackable
 
     public virtual void toDie()
     {
+        AudioManager.Instance.PlayRandomSound("Death");
         IsAlive = false;
         Debug.Log("its time to die...");
         _collider.enabled = false;

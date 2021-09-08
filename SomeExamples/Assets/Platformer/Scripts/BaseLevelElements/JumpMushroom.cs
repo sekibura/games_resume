@@ -26,7 +26,7 @@ public class JumpMushroom : MonoBehaviour
     {
         if (_lastTime + _delay >= Time.time)
             return;
-
+        AudioManager.Instance.PlayRandomSound("Jump");
         _lastTime = Time.time;
       
             
