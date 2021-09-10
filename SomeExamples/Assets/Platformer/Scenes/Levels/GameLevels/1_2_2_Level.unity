@@ -621,10 +621,10 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 3.84
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -3.995575, y: -16.553362, z: 0}
+  - {x: 3.3400002, y: -16.553362, z: 0}
   - {x: 47.63, y: -16.55336, z: 0}
   - {x: 47.63, y: 8.891811, z: 0}
-  - {x: -4.0106964, y: 8.891811, z: 0}
+  - {x: 3.34, y: 8.891811, z: 0}
 --- !u!4 &39811321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7193333649406128862, guid: 0ff5675f66a842f4abf6899af64f725a,
@@ -16206,7 +16206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 1
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.428
+  m_FalloffIntensity: 0.55
   m_Color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
@@ -16229,10 +16229,10 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 3.84
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -3.995575, y: -16.553362, z: 0}
+  - {x: -0.06557512, y: -16.553362, z: 0}
   - {x: 47.63, y: -16.55336, z: 0}
   - {x: 47.63, y: 8.891811, z: 0}
-  - {x: -4.0106964, y: 8.891811, z: 0}
+  - {x: -0.116039276, y: 8.762484, z: 0}
 --- !u!1001 &437300080
 PrefabInstance:
   m_ObjectHideFlags: 0
